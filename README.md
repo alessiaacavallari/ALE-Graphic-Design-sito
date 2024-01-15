@@ -1,3 +1,3 @@
-# Sito-web GRAPHIC SPORTWEAR
+# GRAPHIC SPORTWEAR
 Progetto d'esame per percorso di Web Design
 
