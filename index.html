@@ -6,8 +6,9 @@
     <title>Il Mio Sito Web</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 20px;
+            background-color: #f4f4f4;
         }
         header {
             background-color: #333;
@@ -18,6 +19,23 @@
         main {
             margin-top: 20px;
         }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -26,6 +44,21 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -47,6 +80,20 @@
                 <li>Sviluppo Web</li>
                 <li>Consulenza Informatica</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Contattaci</h2>
+            <p>Puoi contattarci all'indirizzo email: <a href="mailto:info@miositoweb.com">info@miositoweb.com</a></p>
+        </section>
+
+        <section>
+            <h2>Galleria Immagini</h2>
+            <div class="gallery">
+                <img src="immagine1.jpg" alt="Immagine 1">
+                <img src="immagine2.jpg" alt="Immagine 2">
+                <img src="immagine3.jpg" alt="Immagine 3">
+            </div>
         </section>
     </main>
 
