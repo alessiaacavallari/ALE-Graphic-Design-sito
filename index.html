@@ -1,134 +1,124 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-
-    <title>Sito web Graphic Sportwear</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color:white;
-        }
-        header {
-        width: 100%;
-            background-color: Purple;
-            color: #fff;
-            text-align: center;
-        }
-        main {
-            margin-top: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #purple;
-        }
-        p {
-            color: #black;
-        }
-        nav {
-            
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 1em;
-            display: block;
-        }
-            
-        #logo {
-            width: 10%;
-            height: auto;
-            margin-bottom: 10px; 
-
-        } 
-        
-       
-       
-    </style>
+  <title>Sito Alessia</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
 </head>
+
 <body>
-    <header>
-        <h1>GRAPHIC SPORTWEAR</h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img
+        src=".\Images\LOGO.png"
+        height="30"
+        alt="Alessia Logo"
+        loading="lazy"
+      />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>HOME</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chi_siamo.html" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>CHI SIAMO</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>PORTFOLIO</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="https://www.instagram.com/" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>CONTATTI</b></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="navbar-item" >
+            <button class="btn" style="background-color: #05b4bb; color:white; font-size: 18px;"><b>CARRELLO</b></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
 
-           <style>
-               
+  <!-- Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
-  </style>
+    <!-- Image Sliders -->
+    <div class="carousel-inner">
+    <!-- Image one-->
+      <div class="carousel-item active">
+        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="Abbigliamento 1">
+      </div>
 
+      <!-- image two -->
+      <div class="carousel-item">
+        <img src=".\Images\CAROSELLO 2.png" class="d-block w-100 carouselImage" alt="Abbigliamento 2">
+      </div>
 
-        <nav id="burgerMenu">
-            <img src="DEFINITIVO.png" id="logo" alt="Logo" ></img>
-            
-            <a href="#">Home</a>
-            <a href="https://www.instagram.com/">Chi siamo</a>
-            <a href="#">Contatti</a>
-            <a href="#">Portfolio</a>
-            
-        </nav>
+      <!-- Image Three -->
+      <div class="carousel-item">
+        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="Abbigliamento 3">
+      </div>
+
+      <!-- Image Four -->
+      <div class="carousel-item">
+        <img src=".\Images\CAROSELLO 2.png" class="d-block w-100 carouselImage" alt="...">
+      </div>
+
+      <!-- Image Five -->
+      <div class="carousel-item">
+        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="...">
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+  <section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
     
-    </header>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+  </div>
 
-    <main>
+  <div id="centeredBar" class="container-fluid text-center p-4" style="background-color: #e7207f; color: white;">    
+      <h1 style="font-size: 33px;">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
+      <br>
+      <p style="font-size: 16px;">Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensier. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
+      <p style="font-size: 16px;"><b><i>Anyone can design a lgo. But not everyone can Design the right logo.</i></b></p>
+      <h6 style="font-size: 16px;">David Alrey</h6>
+  </div>
 
-    
-            <section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm p-0">
+        <img style="width: 100%; height: 40vh; object-fit: cover; object-position: top;" src="./Images/PORTFOLIO.png" />
+      </div>
+      <div class="col-sm d-flex flex-column align-items-center justify-content-center text-center p-3" style="background-color: #05b4bb; color: white;">
+        <h1>PORTFOLIO</h1>
+        <p>In questa sezione potrai trovare il nostro porfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</p>
+        <button type="button" class="btn" style="background-color: white; color: #05b4bb; border-radius: 5px;">
+          <b>SCOPRI DI PIU</b></button>
+      </div>
+    </div>
+  </div>
 
-          
-             <h1 style="color:purple;">Chi siamo </h1>
-           
-          
-            <p>Siamo un'azienda che si occupa della creazione e personalizzazione di abbbigliamento e materiali sportivi. 
-                Con noi potrai creare la tua linea di abbigliamento personale inserendo la grafica che più preferisci fa ad hoc.</p>
-        </section>
+  <!-- Footer -->
+  <footer class="container-fluid text-center">
+    <p>&copy; 2022 Your ALE graphic design. All rights reserved.</p>
+  </footer>
 
-        <section>
-            <h1 style="color:orange;">I Nostri Servizi</h1>
-            <ul>
-                <li>Creazione della tua grafica personale</li>
-                <li>Sviluppo su supporto tecnico sportivo</li>
-                <li>Vendita a privati e non</li>
-            </ul>
-        </section>
-
-        <section>
-            <h1 style="color:purple;">Contattaci</h1>
-            <p>Puoi contattarci all'indirizzo email e al numero di telefono: 
-                <li> <a href="www.ACgraphicsportwear.com">www.ACgraphicsportwear.com;</a></li>
-                 <li> 3325678955 </li>
-            </p>
-        </section>
-               
-        
-        <section>
-        <h2 style="color:Orange;">Inizia a personalizzare</h2>
-        <p>Benvenuto sul sito AC! Se hai già le idee chiare...inserisci nella tabella la tua idea 
-            o il progetto che ti servirebbe svilluppare insieme ai tuoi dati, che ci serviranno per ricontattarti
-        nel più breve tempo possiile.</p>
-        <img src="immagine1.jpg" alt="Descrizione dell'immagine 1">
-    </section>
-
-    
-
-
-        <section>
-            <h1  style="color:purple;">Galleria Immagini</h1>
-            <div class="gallery">
-                <img src="https://i.pinimg.com/564x/94/cd/a6/94cda6deea8133d319dea5d32e74d088.jpg" >
-                <img src="https://i.pinimg.com/564x/88/79/15/887915a6ef747c4859d52746c275ba28.jpg" >
-                <img src="https://i.pinimg.com/474x/39/15/53/391553a81710e59ebfcf3a794f4075dc.jpg" >
-            </div>
-        </section>
-       
-    </main>
-
-   
 </body>
-   
 </html>
 
