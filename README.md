@@ -7,18 +7,18 @@
 * Corso web design, ACME Novara
 
  # SCOPO DEL REPOSITORY:
-* Realizzazione di una nuova grafica di un sito aziendale mono-pagina per L'AZIENDA GRAPHIC SPORTWEAR
+* Realizzazione di una nuova grafica di un sito aziendale mono-pagina per L'AZIENDA ALE GRAPHIC DESIGN
 * Link sito web creato:
 
  # ELEMENTI PRINCIPALI DELLA PAGINA:
 L'obiettivo è quello di creare un sito web html responsive che comprendesse i principali elementi della pagina, ovvero:
 
-* Nome del ristorante
-* Logo del ristorante
+* Nome dell'azienda
+* Logo personale
 * Burger menù per semplificare la navigazione nel sito
-* Descrizione del ristorante (chi siamo)
-* Descrizione dei prodotti offerti dal ristorante
-* Sezione form per le prenotazioni
+* Descrizione dell'azienda (chi siamo)
+* Descrizione dei prodotti offerti, personalizzazione capi di abbigliamento sportivo
+* Sezione carrello per gli acquisti
 * Gallery
 * Footer con contatti, orari, copyright e profili social
 * Cookies
