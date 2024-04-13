@@ -20,7 +20,7 @@ L'obiettivo è quello di creare un sito web html responsive che comprendesse i p
 * Descrizione dei prodotti offerti, personalizzazione capi di abbigliamento sportivo
 * Sezione carrello per gli acquisti
 * Gallery
-* Footer con contatti, orari, copyright e profili social
+* Footer con contatti, copyright e profili social
 * Cookies
 
 # PER RIUSCIRE A REALIZZARLO HO UTILIZZATO:
