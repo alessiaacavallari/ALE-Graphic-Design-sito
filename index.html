@@ -1,124 +1,185 @@
 <!DOCTYPE html>
 <html lang="it">
+<!-- ChatGPT: mi puoi creare un nav responsive in html5, con posizionamento fisso nel top della pagina e un'icona per l'apertura e chiusura del menu -->
 
 <head>
-  <title>Sito Alessia</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav responsive</title>
+    <style>
+        /* Navbar container */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #e7207f;
+            z-index: 1000;
+        }
+
+        /* Navbar container inner */
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+/* Navbar logo */
+.navbar-logo a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+#logo {
+    max-width: 25%;
+    height: auto;
+}
+        /* Navbar toggle */
+        .navbar-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .navbar-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        /* Navbar menu */
+        .navbar-menu ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Media queries */
+        @media (max-width: 768px) {
+
+            /* Navbar toggle */
+            .navbar-toggle {
+                display: block;
+            }
+
+            /* Navbar menu */
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 10px 20px;
+            }
+
+            .navbar-menu ul {
+                flex-direction: column;
+            }
+
+            .navbar-menu li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .navbar-menu a {
+                font-size: 18px;
+            }
+/* Navbar menu active */
+.navbar-menu.active {
+                display: block;
+            }
+        }
+    </style>
+
+    <style>
+        #titoloprincipale {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            margin-top: 20px;
+            background-color: #e7207f;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img
-        src=".\Images\LOGO.png"
-        height="30"
-        alt="Alessia Logo"
-        loading="lazy"
-      />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>HOME</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="chi_siamo.html" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>CHI SIAMO</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>PORTFOLIO</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="https://www.instagram.com/" style="color: #e7207f;font-size: 18px; padding-inline-start: 40px;"><b>CONTATTI</b></a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-          <li class="navbar-item" >
-            <button class="btn" style="background-color: #05b4bb; color:white; font-size: 18px;"><b>CARRELLO</b></button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>  
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+              <img id="logo" alt="Logo" src="LOGO-1.png">
+            </div>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Chi siamo</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
 
-  <!-- Carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
-    <!-- Image Sliders -->
-    <div class="carousel-inner">
-    <!-- Image one-->
-      <div class="carousel-item active">
-        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="Abbigliamento 1">
+      <script>
+          // Navbar toggle
+          const navbarToggle = document.querySelector('.navbar-toggle');
+          const navbarMenu = document.querySelector('.navbar-menu');
+  
+          navbarToggle.addEventListener('click', () => {
+              navbarMenu.classList.toggle('active');
+          });
+      </script>
+  
+  
+      <div style="outline: 1px solid black;margin-top: 80px;">
+          ci sarà uno slider
       </div>
+  
+      <div style="text-align: center;">
+          <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
+          <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
 
-      <!-- image two -->
-      <div class="carousel-item">
-        <img src=".\Images\CAROSELLO 2.png" class="d-block w-100 carouselImage" alt="Abbigliamento 2">
+            <p>Anyone can design a logo. But not everyone can Design the right logo.
+            David Airey</p>
       </div>
-
-      <!-- Image Three -->
-      <div class="carousel-item">
-        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="Abbigliamento 3">
+  
+  
+      <div style="outline: 1px solid;">
+          <div style="outline: 1px solid red; float: left; width:50%; height: 200px;">
+            <img alt="Studio" src="STUDIO.png"></div>
+          <div style="outline: 1px solid green; float: right; width:50%;height: 200px;text-align: center;">
+              <h2>PORTFOLIO</h2>
+              <p>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.
+                Potrai prendere ispirazione per il tuo progetto!</p>
+                <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>
+          </div>
       </div>
-
-      <!-- Image Four -->
-      <div class="carousel-item">
-        <img src=".\Images\CAROSELLO 2.png" class="d-block w-100 carouselImage" alt="...">
-      </div>
-
-      <!-- Image Five -->
-      <div class="carousel-item">
-        <img src=".\Images\CAROSELLO.png" class="d-block w-100 carouselImage" alt="...">
-      </div>
+      <div style=" text-align: center;">
+        <footer> 
+        <p>&copy; 2024 AleGraphicDesign. Tutti i diritti riservati.</p> 
+      </footer>
     </div>
 
-    <!-- Carousel Controls -->
-  <section>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
+    </body>
     
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </section>
-  </div>
-
-  <div id="centeredBar" class="container-fluid text-center p-4" style="background-color: #e7207f; color: white;">    
-      <h1 style="font-size: 33px;">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
-      <br>
-      <p style="font-size: 16px;">Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensier. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
-      <p style="font-size: 16px;"><b><i>Anyone can design a lgo. But not everyone can Design the right logo.</i></b></p>
-      <h6 style="font-size: 16px;">David Alrey</h6>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm p-0">
-        <img style="width: 100%; height: 40vh; object-fit: cover; object-position: top;" src="./Images/PORTFOLIO.png" />
-      </div>
-      <div class="col-sm d-flex flex-column align-items-center justify-content-center text-center p-3" style="background-color: #05b4bb; color: white;">
-        <h1>PORTFOLIO</h1>
-        <p>In questa sezione potrai trovare il nostro porfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</p>
-        <button type="button" class="btn" style="background-color: white; color: #05b4bb; border-radius: 5px;">
-          <b>SCOPRI DI PIU</b></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="container-fluid text-center">
-    <p>&copy; 2022 Your ALE graphic design. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
-
+    </html>  
