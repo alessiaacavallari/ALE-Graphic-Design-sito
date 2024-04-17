@@ -1,0 +1,135 @@
+/* Navbar container */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #e7207f;
+    z-index: 1000;
+}
+
+/* Navbar container inner */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* Navbar logo */
+.navbar-logo a {
+    color: #e7207f;
+    font-size: 24px;
+    font-weight: bold;
+}
+#logo {
+max-width: 25%;
+height: auto;
+}
+/* Navbar toggle */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #e7207f;
+    margin: 5px 0;
+}
+
+/* Navbar menu */
+.navbar-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+
+/* Navbar toggle */
+.navbar-toggle {
+    display: block;
+    }
+
+/* Navbar menu */
+.navbar-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #05b4bb;
+    padding: 10px 20px;
+    }
+
+.navbar-menu ul {
+    flex-direction: column;
+    }
+
+.navbar-menu li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    }
+
+.navbar-menu a {
+    font-size: 18px;
+    }
+/* Navbar menu active */
+.navbar-menu.active {
+    display: block;
+    }
+}
+
+.centrepage {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 20px;
+    background-color: #e7207f;
+}
+
+
+footer { 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    background-color: #e7207f; 
+    color: white; 
+    text-align: center; 
+    padding: 5px 0; 
+} 
+
+.portfolio {
+    background-color: #05b4bb; 
+    color: #fff; 
+    float: right; 
+    width:50%;
+    height:auto;
+    text-align: center;
+}
+
+.button {
+    background-color: #e7207f;
+    color: white;
+}
+
+
+    

@@ -24,10 +24,12 @@ L'obiettivo è quello di creare un sito web html responsive che comprendesse i p
 * Cookies
 
 # PER RIUSCIRE A REALIZZARLO HO UTILIZZATO:
-* Bootstrap 4.5.2
+* Visual Studio Code
 * Font-awesome
 * Codepen.io
 * Chat Gpt
+* Github
+
 
 # CARATTERISTICHE STRUTTURA ED ELEMENTI PAGINA:
 * Html5
@@ -35,10 +37,8 @@ L'obiettivo è quello di creare un sito web html responsive che comprendesse i p
 * JavaScript
 
 # SITI UTILIZZATI PER TEST PERFORMANCE:
-
 * Pagespeed insight
 * Seoptimer
 
 # TEST VALIDAZIONE
 * Markup validation service
-

@@ -5,204 +5,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Nav responsive</title>
-    <style>
-        /* Navbar container */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            color: #e7207f;
-            z-index: 1000;
-        }
-
-        /* Navbar container inner */
-        .navbar-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-        }
-/* Navbar logo */
-.navbar-logo a {
-            color: #e7207f;
-            font-size: 24px;
-            font-weight: bold;
-        }
-#logo {
-    max-width: 25%;
-    height: auto;
-}
-        /* Navbar toggle */
-        .navbar-toggle {
-            display: none;
-            cursor: pointer;
-        }
-
-        .navbar-toggle span {
-            display: block;
-            width: 20px;
-            height: 2px;
-            background-color: #e7207f;
-            margin: 5px 0;
-        }
-
-        /* Navbar menu */
-        .navbar-menu ul {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar-menu li {
-            margin-left: 20px;
-        }
-        .navbar-menu a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Media queries */
-        @media (max-width: 768px) {
-
-            /* Navbar toggle */
-            .navbar-toggle {
-                display: block;
-            }
-
-            /* Navbar menu */
-            .navbar-menu {
-                display: none;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #05b4bb;
-                padding: 10px 20px;
-            }
-
-            .navbar-menu ul {
-                flex-direction: column;
-            }
-
-            .navbar-menu li {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
-            .navbar-menu a {
-                font-size: 18px;
-            }
-/* Navbar menu active */
-.navbar-menu.active {
-                display: block;
-            }
-        }
-    </style>
-
-    <style>
-        #titoloprincipale {
-            text-align: center;
-            font-size: 30px;
-            color: #fff;
-            margin-top: 20px;
-            background-color: #e7207f;
-        }
-    </style>
+   
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-              <img id="logo" alt="Logo" src="LOGO-1.png">
-            </div>
-            <div class="navbar-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="navbar-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Chi siamo</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contatti</a></li>
-                </ul>
-            </div>
-        </div>
-      </nav>
-
-      <script>
-          // Navbar toggle
-          const navbarToggle = document.querySelector('.navbar-toggle');
-          const navbarMenu = document.querySelector('.navbar-menu');
-  
-          navbarToggle.addEventListener('click', () => {
-              navbarMenu.classList.toggle('active');
-          });
-      </script>
-  
-  
-      <div style="width: 500px; height: auto ;">
-        
-        <img alt="Studio" src="STUDIO.png">
-      </div>
-  
-      <div style="text-align: center; background-color: #e7207f; color: #fff;" >
-          <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
-          <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
-        <p>Anyone can design a logo. But not everyone can Design the right logo.
-            David Airey</p>
-      </div>
-  
-  
-      <div style="outline: 1px solid;">
-          <div style="float: left; max-width:50%; height: auto;">
-            <img alt="Studio" src="STUDIO.png">
-        </div>
-          <div style="background-color: #05b4bb; 
-          color: #fff; 
-          float: right; 
-          width:50%;
-          height:auto;
-          text-align: center;">
-              <h2>PORTFOLIO</h2>
-              <p>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.
-                Potrai prendere ispirazione per il tuo progetto!</p>
-                <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>
-                <style> button{
-                     background-color: #e7207f;
-                      color: white;
-
-                }
-                </style>
-                
-
-          </div>
-      </div>
-      <div style=" text-align: center;">
-        <footer> <p>&copy; 2024 ALEGraphicDesign. All Rights Reserved.</p> 
-        </footer>
-         <style> footer 
-         { position: fixed; 
-         bottom: 0; 
-         left: 0; 
-         width: 100%;
-          background-color: #e7207f; 
-          color: white; 
-          text-align: center; 
-          padding: 5px 0; } 
-          </style>
+    <div class="navbar-container">
+    <div class="navbar-logo">
+    <img id="logo" alt="Logo" src="Immagini/Logo personale.png">
     </div>
+   
+<div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+           
+<div class="navbar-menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Chi siamo</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contatti</a></li>
+    </ul>
+</div>
+        
+</nav>
 
-    </body>
+<script>
+    // Navbar toggle
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+  
+    navbarToggle.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+          });
+</script>
+   
+<div style="width: 500px; height: auto ;">
+    <img alt="Studio" src="Immagini/Studio.png">
+</div>
+  
+<div class="centrepage" >
+    <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
+    <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
+    <p>Anyone can design a logo. But not everyone can Design the right logo. <br> David Airey</p>
+</div>
+  
+<div style="outline: 1px solid;">
+    <div style="float: left; max-width:50%; height: auto;">
+       <img alt="Studio" src="Immagini/Portfolio.jpeg">
+    </div>
+</div>
+
+<div class= "portfolio">
+    <h2>PORTFOLIO</h2>
+    <p>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</p>
+    <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>
+ 
+</style>
+                
+</div>
+      
+<footer> 
+    <p>&copy; 2024 ALEGraphicDesign. All Rights Reserved.</p> 
+</footer>
+
+</div>
+
+</body>
     
-    </html>  
+</html>  
