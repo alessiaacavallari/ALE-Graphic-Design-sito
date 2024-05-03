@@ -1,80 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
-<!-- ChatGPT: mi puoi creare un nav responsive in html5, con posizionamento fisso nel top della pagina e un'icona per l'apertura e chiusura del menu -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Nav responsive</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ALEGraphicDesign</title>
    
 </head>
 
 <body>
-    <nav class="navbar">
-    <div class="navbar-container">
-    <div class="navbar-logo">
-    <img id="logo" alt="Logo" src="Immagini/Logo personale.png">
-    </div>
-   
-<div class="navbar-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-           
-<div class="navbar-menu">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Chi siamo</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contatti</a></li>
-    </ul>
-</div>
-        
-</nav>
 
-<script>
-    // Navbar toggle
-    const navbarToggle = document.querySelector('.navbar-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="logo">
+      <img src="Immagini/Logo personale.png" Logo personale">
+    </a>
+    <a href="#home"class="nav-link"><b>Home</b></a>
+    <a href="#news"class="nav-link"><b>Chi siamo</b></a>
+    <a href="#contact"class="nav-link"><b>Portfolio</b></a>
+    <a href="#about"class="nav-link"><b>Contatti</b></a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
   
-    navbarToggle.addEventListener('click', () => {
-    navbarMenu.classList.toggle('active');
-          });
-</script>
-   
-<div style="width: 500px; height: auto ;">
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+  <div style="width: 500px; height: auto ;">
     <img alt="Studio" src="Immagini/Studio.png">
-</div>
-  
-<div class="centrepage" >
+  </div>
+    
+  <div class="centrepage" >
     <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
     <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
     <p>Anyone can design a logo. But not everyone can Design the right logo. <br> David Airey</p>
-</div>
-  
-<div style="outline: 1px solid;">
+  </div>
+    
+  <div style="outline: 1px solid;">
     <div style="float: left; max-width:50%; height: auto;">
-       <img alt="Studio" src="Immagini/Portfolio.jpeg">
+      <img alt="Studio" src="Immagini/Portfolio.jpeg">
     </div>
-</div>
+  </div>
 
-<div class= "portfolio">
+  <div class= "portfolio">
     <h2>PORTFOLIO</h2>
     <p>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</p>
-    <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>
- 
-</style>
-                
-</div>
-      
-<footer> 
-    <p>&copy; 2024 ALEGraphicDesign. All Rights Reserved.</p> 
-</footer>
-
-</div>
+    <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>                
+  </div>
 
 </body>
-    
+
+<footer> 
+    <p>&copy; 2024 ALEGraphicDesign. All Rights Reserved.</p> 
+</footer>  
+
 </html>  
