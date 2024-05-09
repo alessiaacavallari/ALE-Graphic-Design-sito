@@ -13,48 +13,59 @@
 
   <div class="topnav" id="myTopnav">
     <a href="index.html" class="logo">
-      <img src="Immagini/Logo personale.png" Logo personale">
+      <img src="Immagini/IMMAGINI SITO/Logo-personale.png" Logo personale">
     </a>
     <a href="#home"class="nav-link"><b>Home</b></a>
-    <a href="#news"class="nav-link"><b>Chi siamo</b></a>
-    <a href="#contact"class="nav-link"><b>Portfolio</b></a>
+    <a href="https://www.instagram.com/"class="nav-link"><b>Chi siamo</b></a>
+    <a href="#"class="nav-link"><b>Portfolio</b></a>
     <a href="#about"class="nav-link"><b>Contatti</b></a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
   
-  <script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  </script>
-
-  <div style="width: 500px; height: auto ;">
-    <img alt="Studio" src="Immagini/Studio.png">
+  <div class="carosello">
+    <img alt="Studio" src="Immagini/IMMAGINI SITO/Studio.png">
   </div>
     
-  <div class="centrepage" >
+  <div class="centrepage">
     <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
-    <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</p>
+    <p><b>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te.</b></p>
     <p>Anyone can design a logo. But not everyone can Design the right logo. <br> David Airey</p>
   </div>
     
-  <div style="outline: 1px solid;">
-    <div style="float: left; max-width:50%; height: auto;">
-      <img alt="Studio" src="Immagini/Portfolio.jpeg">
-    </div>
-  </div>
-
   <div class= "portfolio">
-    <h2>PORTFOLIO</h2>
-    <p>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</p>
-    <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>                
-  </div>
+    <div class="portfolio-image">
+      <img alt="Portfolio" style="width:100%;" src="Immagini/IMMAGINI SITO/Portfolio.jpeg" >
+    </div>
+   <div class="portfolio-text">
+     <h2 style="color:white">PORTFOLIO</h2>
+     <p style="padding-inline: 5px;"><b>In questa sezione potrai trovare il nostro portfolio contenente tutti i nostri lavori passati e quelli più particolari.<br>Potrai prendere ispirazione per il tuo progetto!</b></p>
+     <p style="padding-inline: 5px;">Collaboriamo con marchi di alta qualità per garantire capi confortevoli, resistenti e performanti, adatti a qualsiasi disciplina sportiva. I nostri designer seguono con cura ogni fase del processo creativo, dalla scelta dei materiali alla stampa dei loghi e delle grafiche, per assicurare un risultato finale impeccabile.</p>
+     <!-- <button onclick="alert('Hai cliccato sul pulsante')">SCOPRI DI PIU</button>                 -->
+     <div class="container">
 
+      <a href="#" class="button type--A">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">SCOPRI</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+    
+    </div>
+   </div> 
+  </div>
+  
+  <!-- Script js per resize Navbar -->
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 
 <footer> 
