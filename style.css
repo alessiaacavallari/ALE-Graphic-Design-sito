@@ -68,7 +68,7 @@ div {
 .prev, .next {
   cursor: pointer;
   position:absolute;
-  top: 35%;
+  top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
