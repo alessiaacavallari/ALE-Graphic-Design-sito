@@ -1,3 +1,12 @@
+@font-face {
+  font-family: chopin;
+  src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);
+}
+
+div {
+  font-family: chopin;
+}
+
 .topnav {
   overflow: hidden;
   box-shadow: 0px 6px 10px #777;
@@ -5,7 +14,7 @@
   width: 100%;
   top: 0%;
   position: fixed;
-
+  z-index: 2;
   margin-bottom: 0.5% ;
 }
 
@@ -46,7 +55,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-  position: auto;
+  position: relative;
   width:100%;
 }
 
@@ -84,42 +93,37 @@
 
 /* The dots/bullets/indicators */
 .dot {
-  position:absolute;
+  position:relative;
   text-align: center;
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  top: 60%;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .dot2{
-  position:absolute;
+  position:relative;
   text-align: center;
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  left: 48%;
-  top: 60%;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .dot3{
-  position:absolute;
+  position:relative;
   text-align: center;
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  left: 52%;
-  top: 60%;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -146,6 +150,13 @@
   to {opacity: 1}
 }
 
+.circles {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+}
+
 .centrepage {
   text-align: center;
   font-size: 15px;
@@ -161,23 +172,31 @@ footer {
   width: 100%;
   background-color: #e7207f; 
   color: white; 
-  text-align: center; 
+  text-align: center;
+  font-family: chopin; 
 } 
 
-.portfolio-image{
+.portfolio-image img{
   float: left;
+  overflow: hidden;
   width: 50%;
-  height:50px;
-  /* overflow: hidden; */
+  height: 500px;
+  object-fit:cover;
 }
 
 .portfolio-text {
   background-color: #05b4bb; 
-  color: #05b4bb;  
+  color: #fff;  
   width:50%;
-  height:50px;
+  height: 500px;
   text-align: center;
   float: right;
+}
+
+@media screen and (max-width: 700px) {
+  div.portfolio-text , div.centrepage, footer {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -207,9 +226,35 @@ footer {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .dot {
+  margin: 0 10px;
+  } 
+} 
+
+@media screen and (max-width: 600px) {
+  .dot2 {
+  margin: 0 10px;
+  } 
+} 
+
+@media screen and (max-width: 600px) {
+  .dot3 {
+  margin: 0 10px;
+  } 
+} 
+
+@media screen and (max-width: 600px) {
+  .container .button {
+  width: 75%;
+  font-size: 10px;
+  } 
+} 
+
+
 
 .type--A{
-  --line_color : #05b4bb ;
+  --line_color : #fff ;
   --back_color : #e7207f  ;
 }
 .button{
@@ -418,14 +463,14 @@ footer {
 }
 
 .container{
-    width : 100% ;
-    height : 100% ;
     display : flex ;
     flex-direction : column ;
     justify-content : center ;
     align-items : center ;
     padding-top: 10px;
 }
-.button:not(:last-child){
+
+
+/* .button:not(:last-child){
   margin-bottom : 64px ;
-}
+} */
