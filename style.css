@@ -166,14 +166,93 @@ div {
   padding-bottom: 2px;
 }
 
-footer { 
-  position: fixed;
-  bottom: 0;
+.cards {
+  display: flex;
+  background: #fff;
+  padding: 30px 35px;
+  transform-style: preserve-3d;
+  transform: rotate(11deg) rotateY('16.5deg');
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px -5px #000;
+  display: flex;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card h1 {
+  color:#000;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  transform: translateZ(35px);
+}
+
+.card h3 {
+  color: #e7207f;
+  margin-bottom: 6px;
+  transform: translateZ(25px);
+}
+
+.card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card .img {
+  position: relative;
+  height: 100%;
+}
+
+.one .img {
+  top: 5px;
+  height: 110%;
+}
+
+.three .img {
+  top: 5px;
+  left: -4px;
+  height: 110%;
+}
+
+.card .text {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  background: linear-gradient(to bottom,#e7207f 0%, #05b4bb 100% );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card .title {
+  color: #fff;
+  font-weight: 700;
+  padding: 0 10px;
+  margin-bottom: 3px;
+}
+
+footer {
+  bottom: 0;
+  display: flex;
   background-color: #e7207f; 
   color: white; 
   text-align: center;
   font-family: chopin; 
+  justify-content: center;
 } 
 
 .portfolio-image img{
@@ -198,6 +277,18 @@ footer {
     font-size: 10px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  div.cards, .title {
+    font-size: 10px;
+  }
+}
+
+/* @media screen and (max-width: 700px) {
+  div.card-one img {
+    font-size: 10px;
+  }
+} */
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
