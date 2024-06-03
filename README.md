@@ -18,14 +18,14 @@ L'obiettivo è quello di creare un sito web html responsive che comprendesse i p
 * Burger menù per semplificare la navigazione nel sito
 * Descrizione dell'azienda (chi siamo)
 * Descrizione dei prodotti offerti, personalizzazione capi di abbigliamento sportivo
-* Sezione carrello per gli acquisti
-* Gallery
-* Footer con contatti, copyright e profili social
+* Slider gallery dell'azienda
+* Form di contatti
+* Footer con copyright
 * Cookies
 
 # PER RIUSCIRE A REALIZZARLO HO UTILIZZATO:
 * Visual Studio Code
-* Font-awesome
+* Font-Chopin
 * Codepen.io
 * Chat Gpt
 * Github
