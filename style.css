@@ -1,10 +1,19 @@
 @font-face {
-  font-family: chopin;
+  font-family: chopin-text;
   src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);
 }
 
+@font-face {
+  font-family: chopin-title;
+  src: url(chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf);
+}
+
 div {
-  font-family: chopin;
+  font-family: chopin-text;
+}
+
+div h1{
+  font-family: chopin-title;
 }
 
 .topnav {
@@ -178,6 +187,16 @@ div {
   text-align: center;
 }
 
+.responsive-cards {
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.responsive-cards img {
+  height: 100%;
+}
+
 .card {
   border-radius: 15px;
   box-shadow: 5px 5px 20px -5px #000;
@@ -211,20 +230,21 @@ div {
 
 .card .img {
   position: relative;
-  /* height: 100%; */
+  height: 100%; 
   width: 100%;
+  object-fit: cover;
 }
 
-.one .img {
+/* .one .img {
   top: 5px;
   height: 110%;
-}
+} */
 
-.three .img {
+/* .three .img {
   top: 5px;
   /* left: -4px; */
-  height: 110%;
-}
+  /* height: 110%;
+} */ 
 
 .card .text {
   position: absolute;
@@ -314,8 +334,8 @@ input[type=submit]:hover {
   height: 200px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  margin-top: 30px;
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 
 /* This container is needed to position the front and back side */
@@ -340,6 +360,7 @@ input[type=submit]:hover {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border-radius: 20px;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -355,24 +376,35 @@ input[type=submit]:hover {
   transform: rotateY(180deg);
 }
 
+/* Questo media gestisce la dimensione dei testi 
+quando il dispositivo è un telefono o un tablet */
 @media screen and (max-width: 700px) {
   div.portfolio-text , div.centrepage, footer {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  div.cards p, h3.title{
+    font-size: 12px;
+  }
+
+  div.centrepage h1{
+    font-size: 18px;
+  }
+  
+  div.container h2,p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  div.cards h1{
+    font-size: 18px;
+  }
+  
+  div.container input,label{
+    font-size: 14px;
   }
 }
 
-@media screen and (max-width: 700px) {
-  div.cards, .title {
-    font-size: 10px;
-  }
-}
-
-/* @media screen and (max-width: 700px) {
-  div.card-one img {
-    font-size: 10px;
-  }
-} */
-
+/* Questo media gestisce la navbar */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -381,9 +413,6 @@ input[type=submit]:hover {
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -400,32 +429,38 @@ input[type=submit]:hover {
   }
 }
 
+/* Questo media gestisce i pallini del carosello */
 @media screen and (max-width: 600px) {
   .dot {
   margin: 0 10px;
-  } 
-} 
-
-@media screen and (max-width: 600px) {
+  }
   .dot2 {
-  margin: 0 10px;
+    margin: 0 10px;
   } 
-} 
-
-@media screen and (max-width: 600px) {
   .dot3 {
-  margin: 0 10px;
-  } 
+    margin: 0 10px;
+  }  
 } 
 
 @media screen and (max-width: 600px) {
   .container .button {
-  width: 75%;
-  font-size: 10px;
+    width: 75%;
+    font-size: 10px;
   } 
 } 
 
+@media screen and (max-width: 600px) {
+  div.responsive-cards {
+    display: block;
+    margin: 50px;
+  } 
+}
 
+@media screen and (max-width: 600px) {
+  .card.img {
+   width: 100%;
+  } 
+}
 
 .type--A{
   --line_color : #fff ;
@@ -643,8 +678,3 @@ input[type=submit]:hover {
     align-items : center ;
     padding-top: 10px;
 }
-
-
-/* .button:not(:last-child){
-  margin-bottom : 64px ;
-} */
