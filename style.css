@@ -8,11 +8,12 @@
   src: url(chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf);
 }
 
-div {
+div, 
+footer {
   font-family: chopin-text;
 }
 
-div h1{
+div h1 {
   font-family: chopin-title;
 }
 
@@ -24,11 +25,11 @@ div h1{
   top: 0%;
   position: fixed;
   z-index: 2;
-  margin-bottom: 0.5% ;
+  margin-bottom: 0.5%;
 }
 
 .logo {
-  float:left;
+  float: left;
   text-align: left;
   display: flex;
   font-size: 5%;
@@ -42,12 +43,12 @@ div h1{
   display: flex;
   color: #e7207f;
   text-decoration: none;
-  padding:1em;
-  margin-right:2% ;
-} 
+  padding: 1em;
+  margin-right: 2%;
+}
 
 .nav-link {
-  float:right;
+  float: right;
   text-align: center;
 }
 
@@ -60,12 +61,14 @@ div h1{
   color: white;
 }
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  width:100%;
+  width: 100%;
 }
 
 /* Hide the images by default */
@@ -74,9 +77,10 @@ div h1{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
-  position:absolute;
+  position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
@@ -96,37 +100,14 @@ div h1{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: #e7207f;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  position:relative;
-  text-align: center;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.dot2{
-  position:relative;
-  text-align: center;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.dot3{
-  position:relative;
+  position: relative;
   text-align: center;
   cursor: pointer;
   height: 15px;
@@ -138,13 +119,44 @@ div h1{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot2 {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot3 {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
   background-color: #e7207f;
 }
-.active, .dot2:hover {
+
+.active,
+.dot2:hover {
   background-color: #e7207f;
 }
-.active, .dot3:hover {
+
+.active,
+.dot3:hover {
   background-color: #e7207f;
 }
 
@@ -155,8 +167,12 @@ div h1{
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .circles {
@@ -180,7 +196,7 @@ div h1{
   background: #fff;
   padding: 30px 35px;
   transform-style: preserve-3d;
-  transform: rotate(11deg) rotateY('16.5deg');
+  transform: rotate(11deg) rotateY("16.5deg");
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -210,7 +226,7 @@ div h1{
 }
 
 .card h1 {
-  color:#000;
+  color: #000;
   font-size: 40px;
   font-weight: 800;
   letter-spacing: -1px;
@@ -220,7 +236,6 @@ div h1{
 
 .card h3 {
   color: #e7207f;
-  margin-bottom: 6px;
   transform: translateZ(25px);
 }
 
@@ -230,21 +245,10 @@ div h1{
 
 .card .img {
   position: relative;
-  height: 100%; 
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
-/* .one .img {
-  top: 5px;
-  height: 110%;
-} */
-
-/* .three .img {
-  top: 5px;
-  /* left: -4px; */
-  /* height: 110%;
-} */ 
 
 .card .text {
   position: absolute;
@@ -263,45 +267,45 @@ div h1{
   color: #fff;
   font-weight: 700;
   padding: 0 10px;
-  margin-bottom: 3px;
 }
 
 footer {
   bottom: 0;
   display: flex;
-  background-color: #e7207f; 
-  color: white; 
+  background-color: #e7207f;
+  color: white;
   text-align: center;
-  font-family: chopin; 
   justify-content: center;
-} 
+}
 
-.portfolio-image img{
+.portfolio-image img {
   float: left;
   overflow: hidden;
   width: 50%;
   height: 500px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .portfolio-text {
-  background-color: #05b4bb; 
-  color: #fff;  
-  width:50%;
+  background-color: #05b4bb;
+  color: #fff;
+  width: 50%;
   height: 500px;
   text-align: center;
   float: right;
+  padding-top: 50px;
 }
 
 /* Add some padding and a grey background color to containers */
 .container {
   padding: 20px;
-  background-color: #05b4bb; 
+  background-color: #05b4bb;
   color: #fff;
 }
 
 /* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
+input[type="text"],
+input[type="submit"] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -311,31 +315,42 @@ input[type=text], input[type=submit] {
 }
 
 /* Add margins to the checkbox */
-input[type=checkbox] {
+input[type="checkbox"] {
   margin-top: 16px;
 }
 
 /* Style the submit button */
-input[type=submit] {
+input[type="submit"] {
   background-color: #fff;
   color: #05b4bb;
   border: none;
   font-size: 20px;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   opacity: 0.8;
+}
+
+div.Contact h1 {
+ text-align: center;
+ color: #e7207f;
+ font-size: 30px;  
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  /* width: 33%; */
+  height: 400px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin-bottom: 30px;
   border-radius: 20px;
+}
+
+.flip-card-inner img{
+  object-fit: fill;
+  width: 100%;
 }
 
 /* This container is needed to position the front and back side */
@@ -354,7 +369,8 @@ input[type=submit]:hover {
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -378,29 +394,45 @@ input[type=submit]:hover {
 
 /* Questo media gestisce la dimensione dei testi 
 quando il dispositivo è un telefono o un tablet */
-@media screen and (max-width: 700px) {
-  div.portfolio-text , div.centrepage, footer {
+@media screen and (max-width: 900px) {
+  div.portfolio-text,
+  div.centrepage,
+  footer {
     font-size: 12px;
   }
-  div.cards p, h3.title{
+  div.cards p,
+  h3.title {
     font-size: 12px;
   }
 
-  div.centrepage h1{
+  div.centrepage h1 {
     font-size: 18px;
+    margin: 20px;
   }
-  
-  div.container h2,p{
+
+  div.centrepage p {
+    margin: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  div.container h2,
+  p {
     font-size: 12px;
     text-align: center;
   }
 
-  div.cards h1{
+  div.cards h1 {
     font-size: 18px;
   }
-  
-  div.container input,label{
+
+  div.container input,
+  label {
     font-size: 14px;
+  }
+
+  div.flip-card-back,p {
+    font-size: 12px;
   }
 }
 
@@ -413,7 +445,9 @@ quando il dispositivo è un telefono o un tablet */
     float: right;
     display: block;
   }
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -432,249 +466,329 @@ quando il dispositivo è un telefono o un tablet */
 /* Questo media gestisce i pallini del carosello */
 @media screen and (max-width: 600px) {
   .dot {
-  margin: 0 10px;
+    margin: 0 10px;
   }
   .dot2 {
     margin: 0 10px;
-  } 
+  }
   .dot3 {
     margin: 0 10px;
-  }  
-} 
+  }
+}
 
 @media screen and (max-width: 600px) {
   .container .button {
     width: 75%;
     font-size: 10px;
-  } 
-} 
+  }
+}
 
 @media screen and (max-width: 600px) {
   div.responsive-cards {
     display: block;
     margin: 50px;
-  } 
+  }
 }
 
 @media screen and (max-width: 600px) {
   .card.img {
-   width: 100%;
-  } 
+    width: 100%;
+  }
 }
 
-.type--A{
-  --line_color : #fff ;
-  --back_color : #e7207f  ;
+@media screen and (max-width: 600px) {
+  .portfolio-text {
+    padding-top: 20px;
+  }
 }
-.button{
-    position : relative ;
-    z-index : 0 ;
-    width : 240px ;
-    height : 56px ;
-    text-decoration : none ;
-    font-size : 14px ; 
-    font-weight : bold ;
-    color : var(--line_color) ;
-    letter-spacing : 2px ;
-    transition : all .3s ease ;
+
+@media screen and (max-width: 900px) {
+  .flip-card {
+    height: 200px;
+  }
 }
-.button__text{
-    display : flex ;
-    justify-content : center ;
-    align-items : center ;
-    width : 100% ;
-    height : 100% ;
+
+.type--A {
+  --line_color: #fff;
+  --back_color: #e7207f;
 }
+
+.button {
+  position: relative;
+  z-index: 0;
+  width: 240px;
+  height: 56px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--line_color);
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.button__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .button::before,
 .button::after,
 .button__text::before,
-.button__text::after{
-    content : '' ;
-    position : absolute ;
-    height : 3px ;
-    border-radius : 2px ;
-    background : var(--line_color) ;
-    transition : all .5s ease ;
+.button__text::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line_color);
+  transition: all 0.5s ease;
 }
-.button::before{
-    top : 0 ;
-    left : 54px ;
-    width : calc( 100% - 56px * 2 - 16px ) ;
+
+.button::before {
+  top: 0;
+  left: 54px;
+  width: calc(100% - 56px * 2 - 16px);
 }
-.button::after{
-    top : 0 ;
-    right : 54px ;
-    width : 8px ;
+
+.button::after {
+  top: 0;
+  right: 54px;
+  width: 8px;
 }
-.button__text::before{
-    bottom : 0 ;
-    right : 54px ;
-    width : calc( 100% - 56px * 2 - 16px ) ;
+
+.button__text::before {
+  bottom: 0;
+  right: 54px;
+  width: calc(100% - 56px * 2 - 16px);
 }
-.button__text::after{
-    bottom : 0 ;
-    left : 54px ;
-    width : 8px ;
+
+.button__text::after {
+  bottom: 0;
+  left: 54px;
+  width: 8px;
 }
-.button__line{
-    position : absolute ;
-    top : 0 ;
-    width : 56px ;
-    height : 100% ;
-    overflow : hidden ;
+
+.button__line {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 100%;
+  overflow: hidden;
 }
-.button__line::before{
-    content : '' ;
-    position : absolute ;
-    top : 0 ;
-    width : 150% ;
-    height : 100% ;
-    box-sizing : border-box ;
-    border-radius : 300px ;
-    border : solid 3px var(--line_color) ;
+
+.button__line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 300px;
+  border: solid 3px var(--line_color);
 }
+
 .button__line:nth-child(1),
-.button__line:nth-child(1)::before{
-    left : 0 ;
+.button__line:nth-child(1)::before {
+  left: 0;
 }
+
 .button__line:nth-child(2),
-.button__line:nth-child(2)::before{
-    right : 0 ;
+.button__line:nth-child(2)::before {
+  right: 0;
 }
-.button:hover{
-    letter-spacing : 6px ;
+
+.button:hover {
+  letter-spacing: 6px;
 }
+
 .button:hover::before,
-.button:hover .button__text::before{
-    width : 8px ;
+.button:hover .button__text::before {
+  width: 8px;
 }
+
 .button:hover::after,
-.button:hover .button__text::after{
-    width : calc( 100% - 56px * 2 - 16px ) ;
+.button:hover .button__text::after {
+  width: calc(100% - 56px * 2 - 16px);
 }
+
 .button__drow1,
-.button__drow2{
-    position : absolute ;
-    z-index : -1 ;
-    border-radius : 16px ;
-    transform-origin : 16px 16px ;
+.button__drow2 {
+  position: absolute;
+  z-index: -1;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
 }
-.button__drow1{
-    top : -16px ;
-    left : 40px ;
-    width : 32px ;
-    height : 0;
-    transform : rotate( 30deg ) ;
+
+.button__drow1 {
+  top: -16px;
+  left: 40px;
+  width: 32px;
+  height: 0;
+  transform: rotate(30deg);
 }
-.button__drow2{
-    top : 44px ;
-    left : 77px ;
-    width : 32px ;
-    height : 0 ;
-    transform : rotate(-127deg ) ;
+
+.button__drow2 {
+  top: 44px;
+  left: 77px;
+  width: 32px;
+  height: 0;
+  transform: rotate(-127deg);
 }
+
 .button__drow1::before,
 .button__drow1::after,
 .button__drow2::before,
-.button__drow2::after{
-    content : '' ;
-    position : absolute ;
+.button__drow2::after {
+  content: "";
+  position: absolute;
 }
-.button__drow1::before{
-    bottom : 0 ;
-    left : 0 ;
-    width : 0 ;
-    height : 32px ;
-    border-radius : 16px ;
-    transform-origin : 16px 16px ;
-    transform : rotate( -60deg ) ;
+
+.button__drow1::before {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-60deg);
 }
-.button__drow1::after{
-    top : -10px ;
-    left : 45px ;
-    width : 0 ;
-    height : 32px ;
-    border-radius : 16px ;
-    transform-origin : 16px 16px ;
-    transform : rotate( 69deg ) ;
+
+.button__drow1::after {
+  top: -10px;
+  left: 45px;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(69deg);
 }
-.button__drow2::before{
-    bottom : 0 ;
-    left : 0 ;
-    width : 0 ;
-    height : 32px ;
-    border-radius : 16px ;
-    transform-origin : 16px 16px ;
-    transform : rotate( -146deg ) ;
+
+.button__drow2::before {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-146deg);
 }
-.button__drow2::after{
-    bottom : 26px ;
-    left : -40px ;
-    width : 0 ;
-    height : 32px ;
-    border-radius : 16px ;
-    transform-origin : 16px 16px ;
-    transform : rotate( -262deg ) ;
+
+.button__drow2::after {
+  bottom: 26px;
+  left: -40px;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-262deg);
 }
+
 .button__drow1,
 .button__drow1::before,
 .button__drow1::after,
 .button__drow2,
 .button__drow2::before,
-.button__drow2::after{
-    background : var( --back_color ) ;
-}
-.button:hover .button__drow1{
-    animation : drow1 ease-in .06s ;
-    animation-fill-mode : forwards ;
-}
-.button:hover .button__drow1::before{
-    animation : drow2 linear .08s .06s ;
-    animation-fill-mode : forwards ;
-}
-.button:hover .button__drow1::after{
-    animation : drow3 linear .03s .14s ;
-    animation-fill-mode : forwards ;
-}
-.button:hover .button__drow2{
-    animation : drow4 linear .06s .2s ;
-    animation-fill-mode : forwards ;
-}
-.button:hover .button__drow2::before{
-    animation : drow3 linear .03s .26s ;
-    animation-fill-mode : forwards ;
-}
-.button:hover .button__drow2::after{
-    animation : drow5 linear .06s .32s ;
-    animation-fill-mode : forwards ;
-}
-@keyframes drow1{
-    0%   { height : 0 ; }
-    100% { height : 100px ; }
-}
-@keyframes drow2{
-    0%   { width : 0 ; opacity : 0 ;}
-    10%  { opacity : 0 ;}
-    11%  { opacity : 1 ;}
-    100% { width : 120px ; }
-}
-@keyframes drow3{
-    0%   { width : 0 ; }
-    100% { width : 80px ; }
-}
-@keyframes drow4{
-    0%   { height : 0 ; }
-    100% { height : 120px ; }
-}
-@keyframes drow5{
-    0%   { width : 0 ; }
-    100% { width : 124px ; }
+.button__drow2::after {
+  background: var(--back_color);
 }
 
-.container{
-    display : flex ;
-    flex-direction : column ;
-    justify-content : center ;
-    align-items : center ;
-    padding-top: 10px;
+.button:hover .button__drow1 {
+  animation: drow1 ease-in 0.06s;
+  animation-fill-mode: forwards;
 }
+
+.button:hover .button__drow1::before {
+  animation: drow2 linear 0.08s 0.06s;
+  animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::after {
+  animation: drow3 linear 0.03s 0.14s;
+  animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2 {
+  animation: drow4 linear 0.06s 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::before {
+  animation: drow3 linear 0.03s 0.26s;
+  animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::after {
+  animation: drow5 linear 0.06s 0.32s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drow1 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@keyframes drow2 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+@keyframes drow3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80px;
+  }
+}
+
+@keyframes drow4 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 120px;
+  }
+}
+
+@keyframes drow5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 124px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#Chisiamo, 
+#Portfolio
+#Contatti {
+  padding-top: 75px;
+  margin-top: -75px;
+} 
+
+
