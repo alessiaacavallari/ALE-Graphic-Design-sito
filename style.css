@@ -223,6 +223,7 @@ div h1 {
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .card h1 {
@@ -412,7 +413,7 @@ quando il dispositivo è un telefono o un tablet */
 
   div.centrepage p {
     margin: 20px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     margin-top: 0;
   }
 
@@ -423,6 +424,11 @@ quando il dispositivo è un telefono o un tablet */
   }
 
   div.cards h1 {
+    font-size: 18px;
+  }
+
+  div.Contact h1
+  {
     font-size: 18px;
   }
 
@@ -785,7 +791,7 @@ quando il dispositivo è un telefono o un tablet */
 }
 
 #Chisiamo, 
-#Portfolio
+#Portfolio,
 #Contatti {
   padding-top: 75px;
   margin-top: -75px;
