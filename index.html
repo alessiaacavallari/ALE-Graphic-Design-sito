@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" src="script.js"></script> -->
     <title>ALEGraphicDesign</title>
   </head>
 
@@ -182,11 +183,6 @@
         <div>
           <div class="flip-card-front" style="overflow: hidden;">
             <iframe class="responsive-iframe" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Via%20Provinciale%205,%20Paladina%20BG,%20Italy+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" style="height:100%; object-fit:cover;width: 100%;"></iframe>
-            <!-- <div class="flip-card-back" style="vertical-align: middle;">
-              <h2 style="vertical-align: middle;">Alessia Cavallari</h2>
-              <p style="vertical-align: middle;">Graphic Designer</p>
-              <p style="vertical-align: middle;">alessia.cavallari02@gmail.com</p>
-            </div> -->
           </div>
         </div>
       </div>
@@ -210,8 +206,39 @@
       </div>
     </form>
 
-    
+    <div id="openModal" class="modalDialog">
 
+      <div id="popup1" class="overlay">
+        <div class="popup"> <a class="close" href="#">&times;</a>
+          <div id="dialog" class="window">
+            
+            <div class="box">
+              <div class="newletter-title">
+                <h2>Iscriviti per avere il 10%</h2>
+              </div>
+              <div class="box-content newleter-content">
+                <label>Iscriviti alla nostra newsletter per avere accesso alle nostre offerte esclusive, sconti e quant'altro .</label>
+                <div id="frm_subscribe">
+                  <form name="subscribe" id="subscribe_popup">
+                    <div>
+                      <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" title="Riprova" type="email" value="" placeholder="example@example.com" name="subscribe_pemail" id="subscribe_pemail">
+                      <div id="notification"></div>
+                      <a class="button" onclick="window.location='#'"><span>Iscriviti</span></a> 
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <br />
+    <br />
+    <script src="script.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </body>
 
   <footer>
