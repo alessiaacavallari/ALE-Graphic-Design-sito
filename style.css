@@ -171,6 +171,8 @@ relativa all'abbigliamento sportivo personalizzato */
   background-color: #e7207f;
   padding-top: 2px;
   padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* Definisco la parte inerente al portfolio, comprendente la sezione immagine e conteiner con il testo */
 .portfolio-image img {
@@ -188,6 +190,8 @@ relativa all'abbigliamento sportivo personalizzato */
   text-align: center;
   float: right;
   padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /* Definisco la sezione "chi siamo" contenente le tre cards */
 .cards {
@@ -323,7 +327,7 @@ div.Contact h1 {
 /* Definisco la sezione relativa alla newletter */
 input[type="submit"],
 input[type="text"] {
-  width: 100%;
+  width: 50%;
   padding: 12px;
   margin: 8px 0;
   display: inline-block;
@@ -347,7 +351,60 @@ input[type="submit"]:hover {
   background-color: #05b4bb;
   color: #fff;
 }
-/* Definisco la parte relativo al pop uo che appare all'apertura o al caricamento del sito */
+/* Definisco la newslette */
+.newsletter-box {
+	background-color: #05b4bb;
+	padding: 30px;
+	text-align: center;
+  margin: auto;
+}
+
+.newsletter-box h2 {
+	margin: 10px 0 0;
+  color: #fff;
+}
+
+.newsletter-box p {
+	color: #fff;
+	margin: 10px;
+}
+
+.newsletter-box img {
+	max-width: 100%;
+	width: 400px;
+}
+
+.form-control {
+	position: relative;
+	margin: 30px 0 20px;
+}
+
+.input {
+	border: 0;
+	border-radius: 50px;
+	display: block;
+	font-size: 14px;
+	height: 42px;
+	padding: 12px 25px;
+	width: 100%;
+}
+
+.btn {
+	background-color: #e7207f;
+	border: 0;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 14px;
+	height: 42px;
+	padding: 12px 25px;
+	top: 8px;
+	left: 68%;
+}
+
+.input:focus, .btn:focus {
+	outline: 0;
+}
+/* Definisco la parte relativo al pop up che appare all'apertura o al caricamento del sito */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -389,7 +446,7 @@ input[type="submit"]:hover {
   padding: 50px 20px;
   background: #fff;
   height: 350px;
-  width: 690px;
+  width: fit-content;
   position: relative;
   text-align: center;
   top: 50% !important;
@@ -469,6 +526,7 @@ input[type="submit"]:hover {
   width: 65%;
   margin: 20px 0;
   padding-left: 15px;
+  border-radius: 20px;
 }
 #popup1 #frm_subscribe a {
   cursor: pointer;
@@ -481,7 +539,7 @@ input[type="submit"]:hover {
   font-weight: 600;
   line-height: 50px;
   display: inline-block;
-  border-radius: 0;
+  border-radius: 20px;
   letter-spacing: 2px;
 }
 .container {
@@ -491,6 +549,7 @@ input[type="submit"]:hover {
   align-items: center;
   padding-top: 10px;
 }
+
 /* Definisco del padding a queste ancore in quanto la navbar essendo fixed occupa dello spazio, sormontandole */
 #Chisiamo,
 #Contatti,
@@ -686,4 +745,18 @@ nel momento in cui il display risulta inferiore ai 600px */
   .footer-col h4 {
       font-size: 14px;
   }
+  input.input {
+    font-size: 10px;
+  }
 }
+@media screen and (max-width: 600px) {
+	.btn {
+		left: 52%;
+	}
+}
+@media screen and (max-width: 599px) {
+	.btn {
+		left: 58%;
+	}
+}
+

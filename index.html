@@ -55,8 +55,7 @@
 
     <!-- 'Abbigliamento sportivo personalizzato' -->
     <div class="centrepage">
-      <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1>
-      <p>Dai sfogo alle tue idee, ci occuperemo di trasportare nella realtà i tuoi pensieri. <br> Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te. </br>
+      <h1 id="titoloprincipale">ABBIGLIAMENTO SPORTIVO PERSONALIZZATO</h1> Scegli il tuo supporto e sarà nostro compito ideare la grafica adatta a te. Siamo qui per assisterti in ogni passo del processo creativo, dalla concezione iniziale fino alla realizzazione finale. La tua immaginazione è il nostro punto di partenza, e la nostra esperienza trasformerà i tuoi sogni. </br>
       </p>
       <p>Anyone can design a logo. But not everyone can Design the right logo. <br> David Airey </p>
     </div>
@@ -178,24 +177,16 @@
       </div>
     </div>
 
-    <!-- Newsletter -->
-    <form action="action_page.php">
-      <div class="container">
-        <h2>Iscriviti ora alla nostra Newsletter</h2>
-        <p>Troverai tanti contenuti interessanti e potrai rimanere in diretto contatto con noi, ricevendo per primo le offerte in corso. <br> OFFERTE ESCLUSIVE, LOOK INSPO, NUOVI ARRIVI, ANTEPRIMA DELLE COLLEZIONI SPECIALI E MOLTO ALTRO ANCORA <br />
-        </p>
+    <div class="newsletter-box">
+      <img src="https://lh3.google.com/u/0/d/1-WTX2Kw4ZlgLnwT9gYyFOxVXowT9eS-t=w1375-h881-iv1" alt="" />
+      <h2>Iscriviti alla nostra Newsletter</h2>
+      <p>Troverai tanti contenuti interessanti e potrai rimanere in diretto contatto con noi, ricevendo per primo le offerte.</p>
+      <div class="form-control">
+        <input type="text" class="input" placeholder="Enter e-mail adress" />
+        <button class="btn">Iscriviti</button>
       </div>
-      <div class="container" style="background-color:white">
-        <input type="text" placeholder="Nome" name="nome" required>
-        <input type="text" placeholder="Email" name="mail" required>
-        <label style="color: #e7207f;">
-          <input type="checkbox" checked="checked" name="subscribe" /> Resta aggiornato </label>
-      </div>
-      <div class="container">
-        <input type="submit" value="Iscriviti">
-      </div>
-    </form>
-
+    </div>
+    
     <!-- Pop up iniziale -->
     <div id="openModal" class="modalDialog">
       <div id="popup1" class="overlay">
@@ -214,7 +205,7 @@
                   <form name="subscribe" id="subscribe_popup">
                     <div>
                       <!-- Definisce che all'interno del box 'email' deve essere inserita un'email valida "*@*.*" (* qualsiasi cosa) -->
-                      <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" title="Riprova" type="email" value="" placeholder="example@example.com" name="subscribe_pemail" id="subscribe_pemail">
+                      <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" title="Riprova" type="email" value="" placeholder="Enter e-mail adress" name="subscribe_pemail" id="subscribe_pemail">
                       <div id="notification"></div>
                       <a class="button" onclick="window.location='#'">
                         <span>Iscriviti</span>
@@ -228,13 +219,11 @@
         </div>
       </div>
     </div>
-    <br />
-    <br />
   </body>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container" style="display: block;">
       <div class="row">
         <div class="footer-col">
           <h4>company</h4>
