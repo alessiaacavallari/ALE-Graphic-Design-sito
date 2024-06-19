@@ -271,7 +271,6 @@ div h1 {
 }
 
 .container{
-	max-width: 1170px;
 	margin:auto;
 }
 .row{
@@ -282,10 +281,7 @@ ul{
 	list-style: none;
   padding-inline-start: 0px;
 }
-/* .footer{
-	background-color: #24262b;
-    padding: 70px 0;
-} */
+
 .footer-col{
    width: 25%;
    padding: 0 15px;
@@ -347,11 +343,6 @@ ul{
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: auto;
 }
 }
 
@@ -561,6 +552,16 @@ quando il dispositivo è un telefono o un tablet */
   #popup1 .box-content label{
     font-size: 12px;
   } 
+
+  .footer-col ul li a {
+    font-size: 12px;
+  }
+
+  .footer-col h4 {
+    font-size: 14px;
+  }
+
+
 }
 
 /* Questo media gestisce la navbar */
