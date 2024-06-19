@@ -107,40 +107,8 @@ div h1 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.dot2 {
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.dot3 {
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 .active,
 .dot:hover {
-  background-color: #e7207f;
-}
-.active,
-.dot2:hover {
-  background-color: #e7207f;
-}
-.active,
-.dot3:hover {
   background-color: #e7207f;
 }
 /* Definisco il colore-opacita che hanno i pallini quando vengono cliccati */
@@ -240,7 +208,7 @@ relativa all'abbigliamento sportivo personalizzato */
 .card:not(:last-child) {
   margin-right: 30px;
 }
-.card .img {
+.card img {
   position: relative;
   height: 100%;
   width: 100%;
