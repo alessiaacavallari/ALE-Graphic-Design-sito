@@ -270,13 +270,89 @@ div h1 {
   padding: 0 10px;
 }
 
-footer {
-  bottom: 0;
-  display: flex;
-  background-color: #e7207f;
-  color: white;
-  text-align: center;
-  justify-content: center;
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+  padding-inline-start: 0px;
+}
+/* .footer{
+	background-color: #24262b;
+    padding: 70px 0;
+} */
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+   text-align: center;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e7207f;
+	height: 2px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: auto;
+}
 }
 
 .portfolio-image img {
@@ -341,7 +417,6 @@ div.Contact h1 {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  /* width: 33%; */
   height: 400px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -362,6 +437,7 @@ div.Contact h1 {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  word-wrap: break-word;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -496,9 +572,7 @@ quando il dispositivo è un telefono o un tablet */
     float: right;
     display: block;
   }
-  .topnav.responsive {
-    position: relative;
-  }
+ 
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
