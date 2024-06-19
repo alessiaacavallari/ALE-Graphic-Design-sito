@@ -1,33 +1,35 @@
+/* Dichiaro il percorso dei font utilizzati per tutto il sito  */
 @font-face {
   font-family: chopin-text;
   src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);
 }
-
 @font-face {
   font-family: chopin-title;
   src: url(chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf);
 }
-
-div, 
+body{
+  margin: 0;
+}
+/* Tutti i div e il footer avranno chopin-text come font */
+div,
 footer {
   font-family: chopin-text;
 }
-
+/* Tutti gli h1 avranno chopin title come font */
 div h1 {
   font-family: chopin-title;
 }
-
+/* Definisco gli elementi della navbar specificando che essendo fixed ti seguira nelle azioni del sito  */
 .topnav {
   overflow: hidden;
-  box-shadow: 0px 6px 10px #777;
+  box-shadow: 0 6px 10px #777;
   background-color: #fff;
   width: 100%;
-  top: 0%;
+  top: 0;
   position: fixed;
   z-index: 2;
   margin-bottom: 0.5%;
 }
-
 .logo {
   float: left;
   text-align: left;
@@ -38,7 +40,6 @@ div h1 {
   margin-right: 0.5em;
   margin-left: 2%;
 }
-
 .topnav a {
   display: flex;
   color: #e7207f;
@@ -46,66 +47,54 @@ div h1 {
   padding: 1em;
   margin-right: 2%;
 }
-
 .nav-link {
   float: right;
   text-align: center;
 }
-
 .topnav .icon {
   display: none;
 }
-
 .topnav a:hover {
   background-color: #e7207f;
-  color: white;
+  color: #fff;
 }
-
+/* L'asterisco definisce che questo style verra applicato a tutti gli elementi */
 * {
   box-sizing: border-box;
 }
-
-/* Slideshow container */
+/* Definisco lo style per tutti gli elementi del carosello */
 .slideshow-container {
   position: relative;
   width: 100%;
 }
-
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
-
-/* Next & previous buttons */
-.prev,
-.next {
+/* Definisco le frecce di scorrimento del carosello */
+.next,
+.prev {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.next:hover,
+.prev:hover {
   background-color: #e7207f;
 }
-
-/* The dots/bullets/indicators */
+/* Definisco i pallini di scorrimento del carosello  */
 .dot {
   position: relative;
   text-align: center;
@@ -118,7 +107,6 @@ div h1 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .dot2 {
   position: relative;
   text-align: center;
@@ -131,7 +119,6 @@ div h1 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .dot3 {
   position: relative;
   text-align: center;
@@ -144,44 +131,39 @@ div h1 {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active,
 .dot:hover {
   background-color: #e7207f;
 }
-
 .active,
 .dot2:hover {
   background-color: #e7207f;
 }
-
 .active,
 .dot3:hover {
   background-color: #e7207f;
 }
-
-/* Fading animation */
+/* Definisco il colore-opacita che hanno i pallini quando vengono cliccati */
 .fade {
   animation-name: fade;
   animation-duration: 0s;
 }
-
 @keyframes fade {
   from {
-    opacity: 0.4;
+      opacity: 0.4;
   }
   to {
-    opacity: 1;
+      opacity: 1;
   }
 }
-
 .circles {
   position: absolute;
   left: 50%;
-  bottom: 0%;
+  bottom: 0;
   transform: translate(-50%, -50%);
 }
-
+/* Definisco il container centrale contenente la sezione 
+relativa all'abbigliamento sportivo personalizzato */
 .centrepage {
   text-align: center;
   font-size: 15px;
@@ -190,7 +172,24 @@ div h1 {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-
+/* Definisco la parte inerente al portfolio, comprendente la sezione immagine e conteiner con il testo */
+.portfolio-image img {
+  float: left;
+  overflow: hidden;
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+.portfolio-text {
+  background-color: #05b4bb;
+  color: #fff;
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  float: right;
+  padding-top: 50px;
+}
+/* Definisco la sezione "chi siamo" contenente le tre cards */
 .cards {
   display: flex;
   background: #fff;
@@ -202,17 +201,14 @@ div h1 {
   flex-direction: column;
   text-align: center;
 }
-
 .responsive-cards {
   width: 100%;
   justify-content: space-evenly;
   display: flex;
 }
-
 .responsive-cards img {
   height: 100%;
 }
-
 .card {
   border-radius: 15px;
   box-shadow: 5px 5px 20px -5px #000;
@@ -225,7 +221,6 @@ div h1 {
   justify-content: space-evenly;
   margin-top: 15px;
 }
-
 .card h1 {
   color: #000;
   font-size: 40px;
@@ -234,23 +229,19 @@ div h1 {
   margin-bottom: 30px;
   transform: translateZ(35px);
 }
-
 .card h3 {
   color: #e7207f;
   transform: translateZ(25px);
 }
-
 .card:not(:last-child) {
   margin-right: 30px;
 }
-
 .card .img {
   position: relative;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
 .card .text {
   position: absolute;
   bottom: 0;
@@ -263,164 +254,42 @@ div h1 {
   flex-direction: column;
   justify-content: center;
 }
-
 .card .title {
   color: #fff;
   font-weight: 700;
   padding: 0 10px;
 }
-
-.container{
-	margin:auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
-ul{
-	list-style: none;
-  padding-inline-start: 0px;
-}
-
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-   text-align: center;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e7207f;
-	height: 2px;
-	box-sizing: border-box;
-	width: 100%;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #fff;
-	text-decoration: none;
-	font-weight: 300;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-
-.portfolio-image img {
-  float: left;
-  overflow: hidden;
-  width: 50%;
-  height: 500px;
-  object-fit: cover;
-}
-
-.portfolio-text {
-  background-color: #05b4bb;
-  color: #fff;
-  width: 50%;
-  height: 500px;
-  text-align: center;
-  float: right;
-  padding-top: 50px;
-}
-
-/* Add some padding and a grey background color to containers */
 .container {
-  padding: 20px;
-  background-color: #05b4bb;
-  color: #fff;
+  margin: auto;
 }
-
-/* Style the input elements and the submit button */
-input[type="text"],
-input[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-/* Add margins to the checkbox */
-input[type="checkbox"] {
-  margin-top: 16px;
+ul {
+  list-style: none;
+  padding-inline-start: 0;
 }
-
-/* Style the submit button */
-input[type="submit"] {
-  background-color: #fff;
-  color: #05b4bb;
-  border: none;
-  font-size: 20px;
-}
-
-input[type="submit"]:hover {
-  opacity: 0.8;
-}
-
+/* Definisco la sezione contatti contenente una card girevole e
+ un iframe che in questo caso mi permette di visualizzare direttamente 
+ la mappa di Google maps nel mio sito */
 div.Contact h1 {
- text-align: center;
- color: #e7207f;
- font-size: 30px;  
+  text-align: center;
+  color: #e7207f;
+  font-size: 30px;
 }
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   height: 400px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
   margin-bottom: 30px;
   border-radius: 20px;
 }
-
-.flip-card-inner img{
+.flip-card-inner img {
   object-fit: fill;
   width: 100%;
 }
-
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -430,36 +299,55 @@ div.Contact h1 {
   transform-style: preserve-3d;
   word-wrap: break-word;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
+.flip-card-back,
+.flip-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 20px;
 }
-
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #bbb;
-  color: black;
+  color: #000;
 }
-
-/* Style the back side */
 .flip-card-back {
   background-color: #e7207f;
-  color: white;
+  color: #fff;
   transform: rotateY(180deg);
 }
-
+/* Definisco la sezione relativa alla newletter */
+input[type="submit"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="checkbox"] {
+  margin-top: 16px;
+}
+input[type="submit"] {
+  background-color: #fff;
+  color: #05b4bb;
+  border: none;
+  font-size: 20px;
+}
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+.container {
+  padding: 20px;
+  background-color: #05b4bb;
+  color: #fff;
+}
+/* Definisco la parte relativo al pop uo che appare all'apertura o al caricamento del sito */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -468,187 +356,134 @@ div.Contact h1 {
   left: 0;
   z-index: 99999;
   opacity: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
   pointer-events: none;
 }
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
-/* @import url('https://fonts.googleapis.com/css?family=Poppins'); */
-.overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility:visible; z-index: 9999;}
-.overlay:target { visibility: visible; opacity: 1;}
-#popup1 { font-family:poppins;}
-#popup1 .popup {border-radius: 20px;margin: 0px auto; padding: 50px 20px;background: #fff; height: 350px; width:690px; position: relative;    text-align: center;top: 50% !important;   position: fixed !important;-moz-transform: translateY(-50%);    -webkit-transform: translateY(-50%);  -o-transform: translateY(-50%);   -ms-transform: translateY(-50%);    transform: translateY(-50%);right: 0px; left: 0;}
-#popup1 .popup h2 { margin-top: 0; color: #333;}
-#popup1 .popup .close {position: absolute; top: 0px;  right: 0px; transition: all 200ms; font-size: 30px;  font-weight: normal; text-decoration: none;  text-align: center;    background: #333;  border-radius: 0;  cursor: pointer;  float: right;  padding: 0;  color: #fff;  margin-top: 0;  margin-right: 0;  height: 40px;  width: 40px;    line-height: 45px;}
-#popup1 .popup .close:hover {color: #e7207f;}
-#popup1 .popup .content {max-height: 30%;overflow: auto;}
-#popup1 .newletter-title h2 {   font-size: 24px;  text-transform: uppercase;  color: #000;  font-weight: 700;  letter-spacing: 3px;  margin: 0 0 15px;}
-#popup1 .box-content label {  font-weight: 400;  max-width: 560px;  display: inline-block;  margin-bottom: 5px;  font-size: 14px; line-height: 26px;}
-.newletter-popup {  background: #fff;  top: 50% !important;   position: fixed !important; padding: 0;  text-align: center;  -moz-transform: translateY(-50%);    -webkit-transform: translateY(-50%);  -o-transform: translateY(-50%);   -ms-transform: translateY(-50%);    transform: translateY(-50%);}
-#popup1 #frm_subscribe #subscribe_pemail {    background: #EBEBEB none repeat scroll 0% 0%;    border: medium none;    height: 40px;    width: 65%;    margin: 20px 0;    padding-left: 15px;}
-#popup1 #frm_subscribe a {   cursor: pointer;   border: none;    background: #333;    padding: 3px 25px;    text-transform: uppercase;   font-size: 14px;    color: #fff;
-    font-weight: 600;    line-height: 50px;    display: inline-block;    border-radius: 0;    letter-spacing: 2px;}
-#popup1 .box-content .subscribe-bottom {   margin-top: 20px;}
-#popup1 .box-content .subscribe-bottom #newsletter_popup_dont_show_again {    display: inline-block;    margin: 0;    vertical-align: middle;    margin-top: -1px;}
-#popup1 .box-content .subscribe-bottom label {    margin: 0;    font-weight: 400;    max-width: 650px;    display: inline-block;    margin-bottom: 5px;    font-size: 12px;}
-
-
-/* Questo media gestisce la dimensione dei testi 
-quando il dispositivo è un telefono o un tablet */
-@media screen and (max-width: 900px) {
-  div.portfolio-text,
-  div.centrepage,
-  footer {
-    font-size: 12px;
-  }
-  div.cards p,
-  h3.title {
-    font-size: 12px;
-  }
-
-  div.centrepage h1 {
-    font-size: 18px;
-    margin: 20px;
-  }
-
-  div.centrepage p {
-    margin: 20px;
-    margin-bottom: 5px;
-    margin-top: 0;
-  }
-
-  div.container h2,
-  p {
-    font-size: 12px;
-    text-align: center;
-  }
-
-  div.cards h1 {
-    font-size: 18px;
-  }
-
-  div.Contact h1
-  {
-    font-size: 18px;
-  }
-
-  div.container input,
-  label {
-    font-size: 14px;
-  }
-
-  div.flip-card-back,p {
-    font-size: 12px;
-  }
-
-  #popup1 .newletter-title h2{
-    font-size: 18px;
-  }
-
-  #popup1 .box-content label{
-    font-size: 12px;
-  } 
-
-  .footer-col ul li a {
-    font-size: 12px;
-  }
-
-  .footer-col h4 {
-    font-size: 14px;
-  }
-
-
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s;
+  visibility: visible;
+  z-index: 9999;
 }
-
-/* Questo media gestisce la navbar */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
- 
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive .logo {
-    display: none;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
-
-/* Questo media gestisce i pallini del carosello */
-@media screen and (max-width: 600px) {
-  .dot {
-    margin: 0 10px;
-  }
-  .dot2 {
-    margin: 0 10px;
-  }
-  .dot3 {
-    margin: 0 10px;
-  }
+#popup1 {
+  font-family: poppins;
 }
-
-@media screen and (max-width: 600px) {
-  .container .button {
-    width: 75%;
-    font-size: 10px;
-  }
+#popup1 .popup {
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background: #fff;
+  height: 350px;
+  width: 690px;
+  position: relative;
+  text-align: center;
+  top: 50% !important;
+  position: fixed !important;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
 }
-
-@media screen and (max-width: 600px) {
-  div.responsive-cards {
-    display: block;
-    margin: 50px;
-  }
+#popup1 .popup h2 {
+  margin-top: 0;
+  color: #333;
 }
-
-@media screen and (max-width: 600px) {
-  .card.img {
-    width: 100%;
-  }
+#popup1 .popup .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  background: #333;
+  border-radius: 0;
+  cursor: pointer;
+  float: right;
+  padding: 0;
+  color: #fff;
+  margin-top: 0;
+  margin-right: 0;
+  height: 40px;
+  width: 40px;
+  line-height: 45px;
 }
-
-@media screen and (max-width: 600px) {
-  .portfolio-text {
-    padding-top: 20px;
-  }
+#popup1 .popup .close:hover {
+  color: #e7207f;
 }
-
-@media screen and (max-width: 900px) {
-  .flip-card {
-    height: 200px;
-  }
+#popup1 .popup .content {
+  max-height: 30%;
+  overflow: auto;
 }
-
-@media screen and (max-width: 600px) {
-  #popup1 .popup {
-    width: 350px;
-    height: auto;
-  }
+#popup1 .newletter-title h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 15px;
 }
-
-@media screen and (max-width: 600px) {
-  #popup1 #frm_subscribe a {
-    width: 200px;
-    height: 40px;
-    line-height: 30px;
-  }
+#popup1 .box-content label {
+  font-weight: 400;
+  max-width: 560px;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 26px;
 }
-
+.newletter-popup {
+  background: #fff;
+  top: 50% !important;
+  position: fixed !important;
+  padding: 0;
+  text-align: center;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#popup1 #frm_subscribe #subscribe_pemail {
+  background: #ebebeb none repeat scroll 0 0;
+  border: medium none;
+  height: 40px;
+  width: 65%;
+  margin: 20px 0;
+  padding-left: 15px;
+}
+#popup1 #frm_subscribe a {
+  cursor: pointer;
+  border: none;
+  background: #333;
+  padding: 3px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 0;
+  letter-spacing: 2px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -656,15 +491,199 @@ quando il dispositivo è un telefono o un tablet */
   align-items: center;
   padding-top: 10px;
 }
-
-#Chisiamo, 
-#Portfolio,
-#Contatti {
+/* Definisco del padding a queste ancore in quanto la navbar essendo fixed occupa dello spazio, sormontandole */
+#Chisiamo,
+#Contatti,
+#Portfolio {
   padding-top: 75px;
   margin-top: -75px;
-} 
-
-
-
-
-
+}
+/* Definisco tutta la parte relativa al footer */
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  text-align: center;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e7207f;
+  height: 2px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #fff;
+}
+/* Definisco dei media modificando il css dei vari elementi 
+nel momento in cui il display risulta inferiore ai 600px */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+      display: none;
+  }
+  .topnav a.icon {
+      float: right;
+      display: block;
+  }
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .topnav.responsive .logo {
+      display: none;
+  }
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dot {
+      margin: 0 10px;
+  }
+  .dot2 {
+      margin: 0 10px;
+  }
+  .dot3 {
+      margin: 0 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container .button {
+      width: 75%;
+      font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.responsive-cards {
+      display: block;
+      margin: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card.img {
+      width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .portfolio-text {
+      padding-top: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .flip-card {
+      height: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #popup1 .popup {
+      width: 350px;
+      height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #popup1 #frm_subscribe a {
+      width: 200px;
+      height: 40px;
+      line-height: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+/* Definisco le dimensioni dei testi nel momento in cui la dimensione del dispositivo utilizzato risulta minore di 900px */
+@media screen and (max-width: 900px) {
+  div.centrepage,
+  div.portfolio-text,
+  footer {
+      font-size: 12px;
+  }
+  div.cards p,
+  h3.title {
+      font-size: 12px;
+  }
+  div.centrepage h1 {
+      font-size: 18px;
+      margin: 20px;
+  }
+  div.centrepage p {
+      margin: 20px;
+      margin-bottom: 5px;
+      margin-top: 0;
+  }
+  div.container h2,
+  p {
+      font-size: 12px;
+      text-align: center;
+  }
+  div.cards h1 {
+      font-size: 18px;
+  }
+  div.Contact h1 {
+      font-size: 18px;
+  }
+  div.container input,
+  label {
+      font-size: 14px;
+  }
+  div.flip-card-back,
+  p {
+      font-size: 12px;
+  }
+  #popup1 .newletter-title h2 {
+      font-size: 18px;
+  }
+  #popup1 .box-content label {
+      font-size: 12px;
+  }
+  .footer-col ul li a {
+      font-size: 12px;
+  }
+  .footer-col h4 {
+      font-size: 14px;
+  }
+}
