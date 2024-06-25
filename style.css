@@ -140,6 +140,21 @@ relativa all'abbigliamento sportivo personalizzato */
   padding-left: 10px;
   padding-right: 10px;
 }
+/* .glow img:hover{
+  transform: scale(1.2);
+}
+
+
+.glow:hover{
+  border: #000 10px solid;
+}
+
+/* Definisco la parte delle card per gli acquisti 
+.acquisti{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+} */
 /* Definisco la parte inerente al portfolio, comprendente la sezione immagine e conteiner con il testo */
 .portfolio-image img {
   float: left;
