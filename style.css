@@ -132,7 +132,7 @@ div h1 {
 relativa all'abbigliamento sportivo personalizzato */
 .centrepage {
   text-align: center;
-  font-size: 15px;
+  font-size: calc(15px + 0.390625vw);
   color: #fff;
   background-color: #e7207f;
   padding-top: 2px;
@@ -140,21 +140,6 @@ relativa all'abbigliamento sportivo personalizzato */
   padding-left: 10px;
   padding-right: 10px;
 }
-/* .glow img:hover{
-  transform: scale(1.2);
-}
-
-
-.glow:hover{
-  border: #000 10px solid;
-}
-
-/* Definisco la parte delle card per gli acquisti 
-.acquisti{
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 20px;
-} */
 /* Definisco la parte inerente al portfolio, comprendente la sezione immagine e conteiner con il testo */
 .portfolio-image img {
   float: left;
@@ -170,9 +155,10 @@ relativa all'abbigliamento sportivo personalizzato */
   height: 500px;
   text-align: center;
   float: right;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: calc(12.5px + 0.390625vw);
 }
 /* Definisco la sezione "chi siamo" contenente le tre cards */
 .cards {
@@ -180,7 +166,6 @@ relativa all'abbigliamento sportivo personalizzato */
   background: #fff;
   padding: 30px 35px;
   transform-style: preserve-3d;
-  transform: rotate(11deg) rotateY("16.5deg");
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -208,7 +193,7 @@ relativa all'abbigliamento sportivo personalizzato */
 }
 .card h1 {
   color: #000;
-  font-size: 40px;
+  font-size: calc(30px + 0.390625vw);
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -261,7 +246,7 @@ ul {
 div.Contact h1 {
   text-align: center;
   color: #e7207f;
-  font-size: 30px;
+  font-size: calc(30px + 0.390625vw);
 }
 .flip-card {
   background-color: transparent;
@@ -318,11 +303,15 @@ input[type="text"] {
 input[type="checkbox"] {
   margin-top: 16px;
 }
+
+/* La formula inserita per il font-size serve per determinargli una dimensione 
+font di base e che possa ridimensionarsi automaticamente quando la pagina viene visualizzata
+su schermi differenti */
 input[type="submit"] {
   background-color: #fff;
   color: #05b4bb;
   border: none;
-  font-size: 20px;
+  font-size: calc(20px + 0.390625vw);
 }
 input[type="submit"]:hover {
   opacity: 0.8;
@@ -364,7 +353,7 @@ input[type="submit"]:hover {
 	border: 0;
 	border-radius: 50px;
 	display: block;
-	font-size: 14px;
+	font-size: calc(14px + 0.390625vw);
 	height: 42px;
 	padding: 12px 25px;
 	width: 100%;
@@ -375,7 +364,7 @@ input[type="submit"]:hover {
 	border: 0;
 	border-radius: 50px;
 	color: #fff;
-	font-size: 14px;
+	font-size: calc(14px + 0.390625vw);
 	height: 42px;
 	padding: 12px 25px;
 	top: 8px;
@@ -449,7 +438,7 @@ input[type="submit"]:hover {
   top: 0;
   right: 0;
   transition: all 0.2s;
-  font-size: 30px;
+  font-size: calc(30px + 0.390625vw);
   font-weight: 400;
   text-decoration: none;
   text-align: center;
@@ -473,7 +462,7 @@ input[type="submit"]:hover {
   overflow: auto;
 }
 #popup1 .newletter-title h2 {
-  font-size: 24px;
+  font-size: calc(24px + 0.390625vw);
   text-transform: uppercase;
   color: #000;
   font-weight: 700;
@@ -485,7 +474,7 @@ input[type="submit"]:hover {
   max-width: 560px;
   display: inline-block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: calc(14px + 0.390625vw);
   line-height: 26px;
 }
 .newletter-popup {
@@ -515,7 +504,7 @@ input[type="submit"]:hover {
   background: #333;
   padding: 3px 25px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: calc(14px + 0.390625vw);
   color: #fff;
   font-weight: 600;
   line-height: 50px;
@@ -545,7 +534,7 @@ input[type="submit"]:hover {
   text-align: center;
 }
 .footer-col h4 {
-  font-size: 18px;
+  font-size: calc(18px + 0.390625vw);
   color: #fff;
   text-transform: capitalize;
   margin-bottom: 35px;
@@ -630,12 +619,6 @@ nel momento in cui il display risulta inferiore ai 600px */
   }
 }
 @media screen and (max-width: 600px) {
-  .container .button {
-      width: 75%;
-      font-size: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
   div.responsive-cards {
       display: block;
       margin: 50px;
@@ -673,61 +656,6 @@ nel momento in cui il display risulta inferiore ai 600px */
   .footer-col {
       width: 50%;
       margin-bottom: 30px;
-  }
-}
-/* Definisco le dimensioni dei testi nel momento in cui la dimensione del dispositivo utilizzato risulta minore di 900px */
-@media screen and (max-width: 900px) {
-  div.centrepage,
-  div.portfolio-text,
-  footer {
-      font-size: 12px;
-  }
-  div.cards p,
-  h3.title {
-      font-size: 12px;
-  }
-  div.centrepage h1 {
-      font-size: 18px;
-      margin: 20px;
-  }
-  div.centrepage p {
-      margin: 20px;
-      margin-bottom: 5px;
-      margin-top: 0;
-  }
-  div.container h2,
-  p {
-      font-size: 12px;
-      text-align: center;
-  }
-  div.cards h1 {
-      font-size: 18px;
-  }
-  div.Contact h1 {
-      font-size: 18px;
-  }
-  div.container input,
-  label {
-      font-size: 14px;
-  }
-  div.flip-card-back,
-  p {
-      font-size: 12px;
-  }
-  #popup1 .newletter-title h2 {
-      font-size: 18px;
-  }
-  #popup1 .box-content label {
-      font-size: 12px;
-  }
-  .footer-col ul li a {
-      font-size: 12px;
-  }
-  .footer-col h4 {
-      font-size: 14px;
-  }
-  input.input {
-    font-size: 10px;
   }
 }
 @media screen and (max-width: 600px) {
