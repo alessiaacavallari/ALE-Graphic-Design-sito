@@ -20,7 +20,8 @@ body {
   /* padding-left: 20px; */
 }
 
-body h2 {
+body h2,
+p {
   padding-left: 20px;
 }
 
