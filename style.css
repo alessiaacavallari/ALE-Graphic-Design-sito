@@ -240,8 +240,7 @@ ul {
   list-style: none;
   padding-inline-start: 0;
 }
-/* Definisco la sezione contatti contenente una card girevole e
- un iframe che in questo caso mi permette di visualizzare direttamente 
+/* Definisco la sezione contatti mi permette di visualizzare direttamente 
  la mappa di Google maps nel mio sito */
 div.Contact h1 {
   text-align: center;

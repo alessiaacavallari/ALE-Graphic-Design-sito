@@ -8,6 +8,69 @@
     <link rel="stylesheet" href="faqstyle.css" />
   </head>
   <body>
+
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="logo" style="padding: 0%;">
+        <img src="Immagini/Logo-personale.png" alt="Logo personale" style="margin-top: 5px;">
+      </a>
+      <a href="index.html#Contatti" class="nav-link">
+        <b>Contatti</b>
+      </a>
+      <a href="index.html#Chi siamo" class="nav-link">
+        <b>Chi siamo</b>
+      </a>
+      <a href="index.html#Portfolio" class="nav-link">
+        <b>Portfolio</b>
+      </a>
+      <a href="index.html#Home" class="nav-link">
+        <b>Home</b>
+      </a>
+      <!-- Script per gestire l'hamburger menu -->
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+      <!-- Script js per resize Navbar -->
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        // Controllo frecce
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        // Gestione immagini carosello
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+  
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot*");
+          if (n > slides.length) {
+            slideIndex = 1
+          }
+          if (n < 1) {
+            slideIndex = slides.length
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    
     <div class="container">
       <h2>Domande frequenti</h2>
       <div class="accordion">
