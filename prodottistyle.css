@@ -1,7 +1,12 @@
+
+@font-face {
+  font-family: chopin-text;
+  src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);}
+
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
 body{
-  font-family: 'Muli', sans-serif;
-  background:#ddd;
+  background:#e7207f;
+  padding-top: 30px;
 }
 .shell{
   padding:80px 0;
@@ -11,12 +16,6 @@ body{
     width: 25%;
 }
 
-/* @media screen and (min-width: 768px) {
-    .col-md-3 {
-        flex: 0 0 auto;
-        width: 25%;
-    }
-} */
 @media screen and (max-width: 600px) {
     .col-md-3 {
         flex: 0 0 auto;
@@ -58,7 +57,7 @@ body{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .wsk-cp-text{
-  padding-top:150%;
+  padding-top:100%;
 }
 .wsk-cp-text .category{
   text-align:center;
@@ -81,7 +80,7 @@ body{
   -khtml-transform: translate(-50%,-50%);
     
 }
-.wsk-cp-text .category > span{
+/* .wsk-cp-text .category > span{
   padding: 12px 30px;
   border: 1px solid #313131;
   background:#212121;
@@ -90,7 +89,7 @@ body{
   border-radius:27px;
   transition: all 0.05s ease-in-out;
   
-}
+} */
 .wsk-cp-product:hover .wsk-cp-text .category > span{
   border-color:#ddd;
   box-shadow: none;
@@ -103,7 +102,7 @@ body{
   text-align:center;
 }
 .wsk-cp-text .title-product h3{
-  font-size:20px;
+  font-size: calc(20px + 0.390625vw);
   font-weight:bold;
   margin:15px auto;
   overflow: hidden;
@@ -118,8 +117,8 @@ body{
 .wsk-cp-text .description-prod {
   text-align:center;
   width: 100%;
-  height:62px;
-  overflow: hidden;
+  height:80px;
+  /* overflow: hidden; */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
