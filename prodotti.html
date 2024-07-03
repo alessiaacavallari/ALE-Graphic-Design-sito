@@ -1,306 +1,331 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="prodottistyle.css">
+      <link rel="icon" type="image/x-icon" href="Immagini/Favicon.ico">
+      <title>Sezione prodotti</title>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="topnav" id="myTopnav">
+         <a href="index.html" class="logo" style="padding: 0%;">
+         <img src="Immagini/Logo-personale.png" alt="Logo personale" style="margin-top: 5px;">
+         </a>
+         <a href="index.html#Contatti" class="nav-link"> Contatti </a>
+         <a href="index.html#Chisiamo" class="nav-link"> Chi siamo </a>
+         <a href="index.html#Portfolio" class="nav-link"> Portfolio </a>
+         <a href="index.html#Home" class="nav-link"> Home </a>
+         <!-- Script per gestire l'hamburger menu -->
+         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="prodottistyle.css">
-    <title>Product Card UI Design</title>
-</head>
+      <!-- Script js per resize Navbar -->
+      <script>
+         function myFunction() {
+           var x = document.getElementById("myTopnav");
+           if (x.className === "topnav") {
+             x.className += " responsive";
+           } else {
+             x.className = "topnav";
+           }
+         }
+         let slideIndex = 1;
+         showSlides(slideIndex);
+         // Controllo frecce
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+         // Gestione immagini carosello
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+           let i;
+           let slides = document.getElementsByClassName("mySlides");
+           let dots = document.getElementsByClassName("dot*");
+           if (n > slides.length) {
+             slideIndex = 1
+           }
+           if (n < 1) {
+             slideIndex = slides.length
+           }
+           for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex - 1].style.display = "block";
+           dots[slideIndex - 1].className += " active";
+         }
+      </script>
 
-<body>
+      <div class="container text-center">
+         <h1 style="color: #fff;margin-top: 50px; text-align: center;font-size: calc(20px + 0.390625vw);">Abbigliamento sportivo di qualità: scopri le nostre opzioni personalizzate</h1>
+      </div>
 
-   <!-- Navbar -->
-   <div class="topnav" id="myTopnav">
-    <a href="index.html" class="logo" style="padding: 0%;">
-      <img src="Immagini/Logo-personale.png" alt="Logo personale" style="margin-top: 5px;">
-    </a>
-    <a href="index.html#Contatti" class="nav-link">
-      Contatti
-    </a>
-    <a href="index.html#Chisiamo" class="nav-link">
-      Chi siamo
-    </a>
-    <a href="index.html#Portfolio" class="nav-link">
-      Portfolio
-    </a>
-    <a href="index.html#Home" class="nav-link">
-     Home
-    </a>
-    <!-- Script per gestire l'hamburger menu -->
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
-
-  <!-- Script js per resize Navbar -->
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    // Controllo frecce
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    // Gestione immagini carosello
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot*");
-      if (n > slides.length) {
-        slideIndex = 1
-      }
-      if (n < 1) {
-        slideIndex = slides.length
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
-
-    <div class="container text-center">
-        <h1 style="color: #fff;margin-top: 50px; text-align: center;font-size: calc(20px + 0.390625vw);">Abbigliamento sportivo di qualità: scopri le nostre opzioni personalizzate</h1>
-        </div>
-        
-        
-            <div class="row">
-              <div class="col-md-3">
-                <div class="wsk-cp-product">
-                  <div class="wsk-cp-img">
-                    <img src="Immagini/Maglia4.png" alt="Product" class="img-responsive" />
+      <div class="row">
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Maglia4.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Maglietta Sportiva <br> Basic </h3>
                   </div>
-                  <div class="wsk-cp-text">
-                    <div class="title-product">
-                      <h3>Maglietta Sportiva <br> Basic</h3>
-                    </div>
-                    <div class="description-prod">
-                      <p>Maglietta traspirante e leggera, ideale per ogni tipo di attività sportiva.</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="wcf-left"><span class="price">€19,99</span></div>
-                    </div>
+                  <div class="description-prod">
+                     <p>Maglietta traspirante e leggera, ideale per ogni tipo di attività sportiva.</p>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="wsk-cp-product">
-                  <div class="wsk-cp-img"><img src="Immagini/Maglia1.png" alt="Product" class="img-responsive" /></div>
-                  <div class="wsk-cp-text">
-                    <div class="title-product">
-                      <h3>Maglietta Performance Pro</h3>
-                    </div>
-                    <div class="description-prod">
-                      <p>Maglietta ad alte prestazioni, con tecnologia anti-odore e asciugatura rapida.</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="wcf-left"><span class="price">€29,99</span></div>
-                    </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€19,99</span>
+                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="wsk-cp-product">
-                  <div class="wsk-cp-img"><img src="Immagini/Maglia2.png" alt="Product" class="img-responsive" /></div>
-                  <div class="wsk-cp-text">
-                    <div class="title-product">
-                      <h3>Maglietta Training Comfort</h3>
-                    </div>
-                    <div class="description-prod">
-                      <p>Maglietta con taglio ergonomico, perfetta per allenamenti intensi.</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="wcf-left"><span class="price">€24,99</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="wsk-cp-product">
-                  <div class="wsk-cp-img"><img src="Immagini/Maglia3.png" alt="Product" class="img-responsive" /></div>
-                  <div class="wsk-cp-text">
-                    <div class="title-product">
-                      <h3>Maglietta Running Reflective</h3>
-                    </div>
-                    <div class="description-prod">
-                      <p>Maglietta con inserti riflettenti per maggiore visibilità durante la corsa.</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="wcf-left"><span class="price">€27,99
-                      </span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+               </div>
             </div>
-
-            <!-- Sezione pantaloni -->
-            <Section>
-              <a id="Pantaloni" ></a>
-            </Section>
-
-            <div class="shell">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="wsk-cp-product">
-                      <div class="wsk-cp-img">
-                        <img src="Immagini/Pantalone3.png" alt="Product" class="img-responsive" />
-                      </div>
-                      <div class="wsk-cp-text">
-                        <div class="title-product">
-                          <h3>Pantaloni Sportivi Slim Fit</h3>
-                        </div>
-                        <div class="description-prod">
-                          <p>Pantaloni aderenti e comodi, ideali per sessioni di allenamento in palestra.
-                          </p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="wcf-left"><span class="price">€34,99</span></div>
-                        </div>
-                      </div>
-                    </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Maglia1.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Maglietta Performance Pro</h3>
                   </div>
-                  <div class="col-md-3">
-                    <div class="wsk-cp-product">
-                      <div class="wsk-cp-img"><img src="Immagini/Pantalone4.png" alt="Product" class="img-responsive" /></div>
-                      <div class="wsk-cp-text">
-                        <div class="title-product">
-                          <h3>Pantaloni Jogger Relaxed</h3>
-                        </div>
-                        <div class="description-prod">
-                          <p>Pantaloni jogger con elastico in vita, perfetti per il tempo libero.
-                          </p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="wcf-left"><span class="price">€29,99</span></div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="description-prod">
+                     <p>Maglietta ad alte prestazioni, con tecnologia anti-odore e asciugatura rapida.</p>
                   </div>
-                  <div class="col-md-3">
-                    <div class="wsk-cp-product">
-                      <div class="wsk-cp-img"><img src="Immagini/Pantalone2.png" alt="Product" class="img-responsive" /></div>
-                      <div class="wsk-cp-text">
-                        <div class="title-product">
-                          <h3>Pantaloni da Running Leggeri</h3>
-                        </div>
-                        <div class="description-prod">
-                          <p>Pantaloni leggeri e traspiranti, progettati per la massima libertà di movimento.</p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="wcf-left"><span class="price">€39,99</span></div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€29,99</span>
+                     </div>
                   </div>
-                  <div class="col-md-3">
-                    <div class="wsk-cp-product">
-                      <div class="wsk-cp-img"><img src="Immagini/Pantalone1.png" alt="Product" class="img-responsive" /></div>
-                      <div class="wsk-cp-text">
-                        <div class="title-product">
-                          <h3>Pantaloni Termici Outdoor</h3>
-                        </div>
-                        <div class="description-prod">
-                          <p>Pantaloni termici per attività all'aperto, con rivestimento interno in pile.</p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="wcf-left"><span class="price">€44,99</span></div>
-                        </div>
-                      </div>
-                    </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Maglia2.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Maglietta Training Comfort</h3>
                   </div>
-                </div>
+                  <div class="description-prod">
+                     <p>Maglietta con taglio ergonomico, perfetta per allenamenti intensi.</p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€24,99</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Maglia3.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Maglietta Running Reflective</h3>
+                  </div>
+                  <div class="description-prod">
+                     <p>Maglietta con inserti riflettenti per maggiore visibilità durante la corsa.</p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€27,99 </span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-                 <!-- Sezione scarpe -->
-            <Section>
-              <a id="Scarpe"></a>
-            </Section>
-                <div class="shell">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="wsk-cp-product">
-                          <div class="wsk-cp-img">
-                            <img src="Immagini/Scarpe3.png" alt="Product" class="img-responsive" />
-                          </div>
-                          <div class="wsk-cp-text">
-                            <div class="title-product">
-                              <h3>Scarpe da Running Ultralight</h3>
-                            </div>
-                            <div class="description-prod">
-                              <p>Scarpe ultraleggere con ammortizzazione avanzata per la corsa.</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="wcf-left"><span class="price">€69,99</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="wsk-cp-product">
-                          <div class="wsk-cp-img"><img src="Immagini/Scarpe1.png" alt="Product" class="img-responsive" /></div>
-                          <div class="wsk-cp-text">
-                            <div class="title-product">
-                              <h3>Scarpe da Training Multisport</h3>
-                            </div>
-                            <div class="description-prod">
-                              <p>Scarpe versatili, adatte per diverse discipline sportive.</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="wcf-left"><span class="price">€59,99</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="wsk-cp-product">
-                          <div class="wsk-cp-img"><img src="Immagini/Scarpe2.png" alt="Product" class="img-responsive" /></div>
-                          <div class="wsk-cp-text">
-                            <div class="title-product">
-                              <h3>Scarpe da Passeggio Comfort Plus</h3>
-                            </div>
-                            <div class="description-prod">
-                              <p>Scarpe da passeggio con supporto ergonomico e suola antiscivolo.</p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="wcf-left"><span class="price">€49,99</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="wsk-cp-product">
-                          <div class="wsk-cp-img"><img src="Immagini/Scarpe4.png" alt="Product" class="img-responsive" /></div>
-                          <div class="wsk-cp-text">
-                            <div class="title-product">
-                              <h3>Scarpe Outdoor Trail</h3>
-                            </div>
-                            <div class="description-prod">
-                              <p>Scarpe robuste per escursioni, con protezione impermeabile e grip extra.
-                              </p>
-                            </div>
-                            <div class="card-footer">
-                              <div class="wcf-left"><span class="price">€79,99</span></div>
-                            </div>
-                          </div>
-                        </div>
-          
-</body>
+      <!-- Sezione pantaloni -->
+      <div>
+         <a id="Pantaloni"></a>
+      </div>
 
+      <div class="shell">
+      <div class="container">
+      <div class="row">
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Pantalone3.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Pantaloni Sportivi Slim Fit</h3>
+                  </div>
+                  <div class="description-prod">
+                     <p>Pantaloni aderenti e comodi, ideali per sessioni di allenamento in palestra. </p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€34,99</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Pantalone4.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Pantaloni Jogger Relaxed</h3>
+                  </div>
+                  <div class="description-prod">
+                     <p>Pantaloni jogger con elastico in vita, perfetti per il tempo libero. </p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€29,99</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Pantalone2.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Pantaloni da Running Leggeri</h3>
+                  </div>
+                  <div class="description-prod">
+                     <p>Pantaloni leggeri e traspiranti, progettati per la massima libertà di movimento.</p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€39,99</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3">
+            <div class="wsk-cp-product">
+               <div class="wsk-cp-img">
+                  <img src="Immagini/Pantalone1.png" alt="Product" class="img-responsive">
+               </div>
+               <div class="wsk-cp-text">
+                  <div class="title-product">
+                     <h3>Pantaloni Termici Outdoor</h3>
+                  </div>
+                  <div class="description-prod">
+                     <p>Pantaloni termici per attività all'aperto, con rivestimento interno in pile.</p>
+                  </div>
+                  <div class="card-footer">
+                     <div class="wcf-left">
+                        <span class="price">€44,99</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Sezione scarpe -->
+      <div>
+         <a id="Scarpe"></a>
+      </div>
+
+      <div class="shell">
+      <div class="container">
+      <div class="row">
+      <div class="col-md-3">
+         <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+               <img src="Immagini/Scarpe3.png" alt="Product" class="img-responsive">
+            </div>
+            <div class="wsk-cp-text">
+               <div class="title-product">
+                  <h3>Scarpe da Running Ultralight</h3>
+               </div>
+               <div class="description-prod">
+                  <p>Scarpe ultraleggere con ammortizzazione avanzata per la corsa.</p>
+               </div>
+               <div class="card-footer">
+                  <div class="wcf-left">
+                     <span class="price">€69,99</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+               <img src="Immagini/Scarpe1.png" alt="Product" class="img-responsive">
+            </div>
+            <div class="wsk-cp-text">
+               <div class="title-product">
+                  <h3>Scarpe da Training Multisport</h3>
+               </div>
+               <div class="description-prod">
+                  <p>Scarpe versatili, adatte per diverse discipline sportive.</p>
+               </div>
+               <div class="card-footer">
+                  <div class="wcf-left">
+                     <span class="price">€59,99</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+         <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+               <img src="Immagini/Scarpe2.png" alt="Product" class="img-responsive">
+            </div>
+            <div class="wsk-cp-text">
+               <div class="title-product">
+                  <h3>Scarpe da Passeggio Comfort Plus</h3>
+               </div>
+               <div class="description-prod">
+                  <p>Scarpe da passeggio con supporto ergonomico e suola antiscivolo.</p>
+               </div>
+               <div class="card-footer">
+                  <div class="wcf-left">
+                     <span class="price">€49,99</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3">
+      <div class="wsk-cp-product">
+         <div class="wsk-cp-img">
+            <img src="Immagini/Scarpe4.png" alt="Product" class="img-responsive">
+         </div>
+         <div class="wsk-cp-text">
+            <div class="title-product">
+               <h3>Scarpe Outdoor Trail</h3>
+            </div>
+            <div class="description-prod">
+               <p>Scarpe robuste per escursioni, con protezione impermeabile e grip extra. </p>
+            </div>
+            <div class="card-footer">
+               <div class="wcf-left">
+                  <span class="price">€79,99</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
