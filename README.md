@@ -5,6 +5,7 @@
 * Indirizzo Graphic Design
 * Prof. Baccan Matteo
 * Corso web design, ACME Novara
+* https://alegraphic-design.netlify.app/
 
  # SCOPO DEL REPOSITORY:
 * Realizzazione di una nuova grafica di un sito aziendale mono-pagina per L'AZIENDA ALE GRAPHIC DESIGN
@@ -30,15 +31,12 @@ L'obiettivo è quello di creare un sito web html responsive che comprendesse i p
 * Chat Gpt
 * Github
 
-
 # CARATTERISTICHE STRUTTURA ED ELEMENTI PAGINA:
 * Html5
 * CSS
 * JavaScript
 
-# SITI UTILIZZATI PER TEST PERFORMANCE:
-* Pagespeed insight
-* Seoptimer
-
 # TEST VALIDAZIONE
-* Markup validation service
+* Validator W3C
+* GTMetrix
+
