@@ -1,12 +1,24 @@
-
+/* Dichiaro il percorso dei font utilizzati per tutto il sito  */
 @font-face {
   font-family: chopin-text;
-  src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);}
+  src: url(chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf);
+}
+@font-face {
+  font-family: chopin-title;
+  src: url(chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf);
+}
 
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
 body{
   background:#e7207f;
   padding-top: 30px;
+}
+
+body, footer{
+  font-family: chopin-text;
+}
+
+h1,h3{
+  font-family: chopin-title;
 }
 
 /* Definisco gli elementi della navbar specificando che essendo fixed ti seguira nelle azioni del sito  */
@@ -16,6 +28,7 @@ body{
   background-color: #fff;
   width: 100%;
   top: 0;
+  left: 0;
   position: fixed;
   z-index: 2;
   margin-bottom: 0.5%;
@@ -46,19 +59,12 @@ body{
   background-color: #e7207f;
   color: #fff;
 }
-.shell{
-  padding:80px 0;
-}
+/* .shell{
+  padding:30px 0;
+} */
 
 .col-md-3 {
     width: 25%;
-}
-
-@media screen and (max-width: 600px) {
-    .col-md-3 {
-        flex: 0 0 auto;
-        width: 50%;
-    }
 }
 
 .wsk-cp-product{
@@ -67,10 +73,10 @@ body{
   border-radius:6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   position:relative;
-  margin:20px auto;
+  margin:20px;
 }
 .wsk-cp-img{
-  position:absolute;
+  position:relative;
   top:5px;
   left:50%;
   transform:translate(-50%);
@@ -80,7 +86,6 @@ body{
   -o-transform:translate(-50%);
   -khtml-transform:translate(-50%);
   width: 100%;
-  padding: 15px;
   transition: all 0.2s ease-in-out;
 }
 .wsk-cp-img img{
@@ -94,9 +99,7 @@ body{
 .wsk-cp-product:hover .wsk-cp-img img{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
-.wsk-cp-text{
-  padding-top:100%;
-}
+
 .wsk-cp-text .category{
   text-align:center;
   font-size:12px;
@@ -118,16 +121,7 @@ body{
   -khtml-transform: translate(-50%,-50%);
     
 }
-/* .wsk-cp-text .category > span{
-  padding: 12px 30px;
-  border: 1px solid #313131;
-  background:#212121;
-  color:#fff;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  border-radius:27px;
-  transition: all 0.05s ease-in-out;
-  
-} */
+
 .wsk-cp-product:hover .wsk-cp-text .category > span{
   border-color:#ddd;
   box-shadow: none;
@@ -138,14 +132,14 @@ body{
 }
 .wsk-cp-text .title-product{
   text-align:center;
+  height: 80px;
 }
 .wsk-cp-text .title-product h3{
-  font-size: calc(20px + 0.390625vw);
+  font-size: calc(14px + 0.390625vw);
   font-weight:bold;
   margin:15px auto;
   overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  text-overflow: ellipsis;
   width:100%;
 }
 .wsk-cp-text .description-prod p{
@@ -156,11 +150,8 @@ body{
   text-align:center;
   width: 100%;
   height:80px;
-  /* overflow: hidden; */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
   margin-bottom:15px;
+  overflow: scroll;
 }
 .card-footer{
   padding: 25px 0 5px;
@@ -175,8 +166,7 @@ body{
 }
 
 .card-footer .wcf-left{
-  float:left;
-  
+  float:left; 
 }
 
 .card-footer .wcf-right{
@@ -188,52 +178,16 @@ body{
   font-weight:bold;
 }
 
-a.buy-btn{
-  display:block;
-  color:#212121;
-  text-align:center;
-  font-size: 18px;
-  width:35px;
-  height:35px;
-  line-height:35px;
-  border-radius:50%;
-  border:1px solid #212121;
-  transition: all 0.2s ease-in-out;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-a.buy-btn:hover , a.buy-btn:active, a.buy-btn:focus{
-  border-color: #FF9800;
-  background: #FF9800;
-  color: #fff;
-  text-decoration:none;
-}
-.wsk-btn{
-  display:inline-block;
-  color:#212121;
-  text-align:center;
-  font-size: 18px;
-  transition: all 0.2s ease-in-out;
-  border-color: #FF9800;
-  background: #FF9800;
-  padding:12px 30px;
-  border-radius:27px;
-  margin: 0 5px;
-}
-.wsk-btn:hover, .wsk-btn:focus, .wsk-btn:active{
-  text-decoration:none;
-  color:#fff;
-}  
-.red{
-  color:#F44336;
-  font-size:22px;
-  display:inline-block;
-  margin: 0 5px;
-}
-@media screen and (max-width: 991px) {
+
+@media screen and (max-width: 900px) {
   .wsk-cp-product{
-    margin:40px auto;
+    margin:40px 10px;
   }
-  .wsk-cp-product .wsk-cp-img{
-  top:-40px;
 }
 .wsk-cp-product .wsk-cp-img img{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -251,7 +205,15 @@ a.buy-btn{
   background: #FF9800;
   color: #fff;
 }
+
+/* Definisco del padding a queste ancore in quanto la navbar essendo fixed occupa dello spazio, sormontandole */
+#Pantaloni,
+#Scarpe{
+  scroll-margin-top: 50px;
+  padding-top: 100px;
+  margin-top: -100px;
 }
+
 /* Definisco dei media modificando il css dei vari elementi 
 nel momento in cui il display risulta inferiore ai 600px */
 @media screen and (max-width: 600px) {
@@ -276,3 +238,9 @@ nel momento in cui il display risulta inferiore ai 600px */
       text-align: left;
   }
 }
+@media screen and (max-width: 600px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+      }
+  }
