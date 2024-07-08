@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Esempio di uso delle Netlify form</title>
+  <!-- include bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Gestione delle form con Netlify</h1>
+
+    <form name="contatti" method="POST" data-netlify="true">      
+      <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
+      
+      <!-- form group   -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Inserisci la tua email: ci permetterà di risponderti">
+      </div>
+      <br />
+      <div data-netlify-recaptcha="true"></div>
+      <br/>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Invia</button>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
