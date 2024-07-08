@@ -175,8 +175,11 @@
       <h2>Iscriviti alla nostra Newsletter</h2>
       <p>Troverai tanti contenuti interessanti e potrai rimanere in diretto contatto con noi, ricevendo per primo le offerte.</p>
       <div class="form-control">
-        <input type="text" class="input" placeholder="Enter e-mail adress">
-        <button class="btn" onclick="location.href='404.html';">Iscriviti</button>
+        <form name="subscribe" id="subscribe_popup" method="POST" data-netlify="true">
+          <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
+          <input type="text" class="input" placeholder="Enter e-mail adress">
+          <button class="btn" button type="submit">Iscriviti</button>
+        </form>
       </div>
     </div>
     
@@ -192,21 +195,27 @@
               <div class="newletter-title">
                 <h2>Iscriviti per avere il 10% di sconto</h2>
               </div>
+
               <div class="box-content newleter-content">
                 <label>Iscriviti alla nostra newsletter per avere accesso alle nostre offerte esclusive, sconti e quant'altro .</label>
                 <div id="frm_subscribe">
-                  <form name="subscribe" id="subscribe_popup">
+
+                  <form name="subscribe" id="subscribe_popup" method="POST" data-netlify="true">
+                    <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
                     <div>
-                      <!-- Definisce che all'interno del box 'email' deve essere inserita un'email valida "*@*.*" (* qualsiasi cosa) -->
-                      <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" title="Riprova" type="email" value="" placeholder="Enter e-mail adress" name="subscribe_pemail" id="subscribe_pemail">
+                      <!-- Definisce che all'interno del box 'email' deve essere inserita un'email valida "@." ( qualsiasi cosa) -->
+                      <input pattern="/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/" title="Riprova" type="email" value="" placeholder="Enter e-mail adress" name="subscribe_pemail" id="subscribe_pemail">
                       <div id="notification"></div>
-                      <a class="button" onclick="window.location='#'">
+                      <div data-netlify-recaptcha="true"></div>
+                      <a class="button" button type="submit">
                         <span>Iscriviti</span>
                       </a>
                     </div>
                   </form>
+
                 </div>
               </div>
+
             </div>
           </div>
         </div>

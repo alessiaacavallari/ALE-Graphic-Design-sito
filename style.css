@@ -338,7 +338,7 @@ input[type="submit"]:hover {
 	border-radius: 50px;
 	color: #fff;
 	font-size: calc(14px + 0.390625vw);
-	height: 42px;
+	/* height: 42px; */
 	padding: 12px 25px;
 	top: 8px;
 	left: 68%;
@@ -642,4 +642,3 @@ nel momento in cui il display risulta inferiore ai 600px */
 		left: 58%;
 	}
 }
-
