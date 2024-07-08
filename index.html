@@ -176,13 +176,17 @@
       <p>Troverai tanti contenuti interessanti e potrai rimanere in diretto contatto con noi, ricevendo per primo le offerte.</p>
       <div class="form-control">
 
-        <!-- In questo form invece che l'honeypot ho utilizato il recaptcha per evitare lo spam attraverso il form -->
-
-        <form name="subscribe" id="subscribe_popup" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+        <!-- Aggiunto anche l'honeypot per evitare gli spam bot, quando un bot compila i form cerca di compilare tutti i campi disponibili essendo questo un campo invisibile può essere compilato solo da un bot e non da un umano 
+        se questo campo viene compilato allora vuol dire che è stato compilato da un bot e viene scartato -->
+        <form name="subscribe" id="subscribe_popup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
           <input type="text" class="input" placeholder="Enter e-mail adress">
+          <p style="visibility: hidden;position: absolute;">
+            <label>
+              Non compilarlo se sei umano: <input name="bot-field" />
+            </label>
+          </p>
           <button class="btn" button type="submit">Iscriviti</button>
-          <div data-netlify-recaptcha="true"></div>
         </form>
       
       </div>
@@ -204,8 +208,7 @@
               <div class="box-content newleter-content">
                 <label>Iscriviti alla nostra newsletter per avere accesso alle nostre offerte esclusive, sconti e quant'altro .</label>
                 <div id="frm_subscribe">
-                  <!-- Aggiunto anche l'honeypot per evitare gli spam bot, quando un bot compila i form cerca di compilare tutti i campi disponibili essendo questo un campo invisibile può essere compilato solo da un bot e non da un umano 
-                   se questo campo viene compilato allora vuol dire che è stato compilato da un bot e viene scartato -->
+
                   <form name="subscribe" id="subscribe_popup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="subject" value="Nuovi dati ricevuti dalla form %{formName} (%{submissionId})" />
                     <div>
