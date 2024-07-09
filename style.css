@@ -642,3 +642,9 @@ nel momento in cui il display risulta inferiore ai 600px */
 		left: 58%;
 	}
 }
+@media screen and (min-width: 599px) {
+	#popup1 .popup {
+		height: 200px;
+    font-size: 20px;
+	}
+}
